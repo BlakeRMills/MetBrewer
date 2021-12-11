@@ -1,7 +1,7 @@
 # MetBrewer
 [Installation](#install-package)  
 [Palettes](#palettes)  
-[Functions](#building-palettes)  
+[Functions](#functions)  
 
 ## Install Package
 Currently, the package is only able to be downloaded through github
@@ -180,7 +180,7 @@ devtools::install_github("BlakeRMills/MetBrewer")
 
 
 
-## Building Palettes
+## Functions
 ```r
 met.brewer(name="VanGogh1",n=7,type="discrete")
 ```
