@@ -94,7 +94,7 @@ devtools::install_github("BlakeRMills/MetBrewer")
 ***
 
 ### Morgenstern
-![Morgenstern](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Morgenstern .png)
+![Morgenstern]https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Morgenstern%20.png)
 - Jungfrau, Mönch, and Eiger, 1851, Carl Morgenstern, German, [Link](https://www.metmuseum.org/art/collection/search/440360)
 ***
 
