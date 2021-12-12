@@ -8,11 +8,11 @@ met.brewer(name, n, type = c("discrete", "continuous"))
 }
 \arguments{
 \item{name}{Name of Palette. Choices are:
-\code{Austria}, \code{Cassatt}, \code{Degas}, \code{Egypt}, \code{Gaugin}, \code{Greek},
-\code{Hokusai}, \code{Ingres}, \code{Isfahan1}, \code{Klimt}, \code{Monet}, \code{Moreau},
-\code{Morgenstern}, \code{Nattier}, \code{NewKingdom}, \code{Pillement}, \code{Pissaro}, \code{Redon},
-\code{Robert}, \code{Stevens}, \code{Tara}, \code{Thomas}, \code{Tiepolo}, \code{Troy},
-\code{VanGogh1}, \code{VanGogh2}, \code{Veronese}, and \code{Wissing}}
+\code{Austria}, \code{Cassatt}, \code{Degas}, \code{Egypt}, \code{Gauguin}, \code{Greek},
+\code{Hokusai}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2}, \code{Juarez}, \code{Klimt},
+\code{Manet}, \code{Monet}, \code{Moreau}, \code{Morgenstern}, \code{Nattier}, \code{NewKingdom},
+\code{Pillement}, \code{Pissaro}, \code{Redon}, \code{Renoir}, \code{Robert}, \code{Stevens}, \code{Tara},
+\code{Thomas}, \code{Tiepolo}, \code{Troy}, \code{VanGogh1}, \code{VanGogh2}, \code{Veronese}, and \code{Wissing}}
 
 \item{n}{Number of desired colors. If number of requested colors is beyond the scope of the palette,
 colors are automatically interpolated. If n is not provided, the length of the palette is used.}
