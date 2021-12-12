@@ -4,7 +4,7 @@ Palettes inspired by works at the Metropolitan Museum of Art in New York. All pi
 Structure of the package was based on coding from the [`PNWColors`](https://github.com/jakelawlor/PNWColors) and [`wesanderson`](https://github.com/karthik/wesanderson) palettes.
 
 For requests, questions, comments, concerns, or any thing else, feel free to reach out to me:<br />
-Twitter: [here](https://twitter.com/BlakeRobMills)<br /> LinkedIn: [here](linkedin.com/in/blake-m-79a74513a) <br />Email: brm2143@columbia.edu
+Twitter: [here](https://twitter.com/BlakeRobMills)<br /> LinkedIn: [here](https://www.linkedin.com/in/blake-m-79a74513a/) <br />Email: brm2143@columbia.edu
 
 ***
 [Installation](#install-package)  
