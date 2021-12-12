@@ -30,17 +30,17 @@ devtools::install_github("BlakeRMills/MetBrewer")
 
 ### Degas
 ![Degas](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Degas.png)
-- Listing to Come
+- The Rehearsal of the Ballet Onstage, 1874, Edgar Degas, French, [Link](https://www.metmuseum.org/art/collection/search/436155)
 ***
 
 ### Egypt
 ![Egypt](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Egypt.png)
-- Listing to Come
+- The King with Isis, Tomb of Haremhab, A.D. 1910–1911; original ca. 1323–1295 B.C., Twentieth Century; original New Kingdom, [Link](https://www.metmuseum.org/art/collection/search/557794?searchField=All&amp;sortBy=Relevance&amp;deptids=10&amp;ao=on&amp;ft=*&amp;offset=0&amp;rpp=80&amp;pos=63)
 ***
 
-### Gaugin
-![Gaugin](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Gaugin.png)
-- Listing to Come
+### Gauguin
+![Gauguin](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Gaugin.png)
+- A Farm in Brittany, 1874, Paul Gauguin, French, [Link](https://www.metmuseum.org/art/collection/search/436448)
 ***
 
 ### Greek
