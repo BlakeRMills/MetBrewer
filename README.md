@@ -1,4 +1,12 @@
 # MetBrewer
+Palettes inspired by works at the Metropolitan Museum of Art in New York. All pieces selected come from various time periods, regions, and mediums. Let me know if you have any requests for a particular piece.
+
+Structure of the package was based on coding from the [`PNWColors`](https://github.com/jakelawlor/PNWColors) and [`wesanderson`](https://github.com/karthik/wesanderson) palettes.
+
+For requests, questions, comments, concerns, or any thing else, feel free to reach out to me:<br />
+Twitter: [here](https://twitter.com/BlakeRobMills)<br /> LinkedIn: [here](linkedin.com/in/blake-m-79a74513a) <br />Email: brm2143@columbia.edu
+
+***
 [Installation](#install-package)  
 [Palettes](#palettes)  
 [Functions](#functions)  
@@ -45,42 +53,42 @@ devtools::install_github("BlakeRMills/MetBrewer")
 
 ### Greek
 ![Greek](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Greek.png)
-- Listing to Come
+- Terracotta neck-amphora (jar), ca. 550–540 B.C., Greek, [Link](https://www.metmuseum.org/art/collection/search/254199)
 ***
 
 ### Hokusai
 ![Hokusai](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Hokusai.png)
-- Listing to Come
+- Poem by Gon-Chūnagon Sadaie, from the series One Hundred Poems Explained by the Nurse (Hyakunin isshu uba ga etoki), 1760–1849, Katsushika Hokusai, Japanese, [Link](https://www.metmuseum.org/art/collection/search/56157)
 ***
 
 ### Ingres
 ![Ingres](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Ingres.png)
-- Listing to Come
+- Joséphine-Éléonore-Marie-Pauline de Galard de Brassac de Béarn (1825–1860), Princesse de Broglie, 1851–53, Jean Auguste Dominique Ingres, French, [Link](https://www.metmuseum.org/art/collection/search/459106)
 ***
 
 ### Isfahan1
 ![Isfahan1](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Isfahan1.png)
-- Listing to Come
+- Mihrab (Prayer Niche), dated A.H. 755/ A.D. 1354–55,  From Iran, Isfahan, [Link](https://www.metmuseum.org/art/collection/search/449537?searchField=All&amp;sortBy=Relevance&amp;ft=Mihrab&amp;offset=0&amp;rpp=20&amp;pos=1)
 ***
 
 ### Isfahan2
 ![Isfahan2](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Isfahan2.png)
-- Listing to Come
+- Garden Gathering, 1640–50, From Iran, Isfahan, [Link](https://www.metmuseum.org/art/collection/search/455082)
 ***
 
 ### Juarez
 ![Juarez](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Juarez.png)
-- Listing to Come
+- The Entombment of Christ, 1702, Juan Rodríguez Juárez, Mexican, [Link](https://www.metmuseum.org/art/collection/search/631985)
 ***
 
 ### Klimt
 ![Klimt](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Klimt.png)
-- Listing to Come
+- Mäda Primavesi (1903–2000), 1912-13, Gustav Klimt, Austrian, [Link](https://www.metmuseum.org/art/collection/search/436819)
 ***
 
 ### Manet
 ![Manet](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Manet.png)
-- Listing to Come
+- Boating, 1874, Edouard Manet, French, [Link](https://www.metmuseum.org/art/collection/search/436947?searchField=All&amp;sortBy=Relevance&amp;ft=manet&amp;offset=0&amp;rpp=20&amp;pos=8)
 ***
 
 ### Monet
@@ -90,7 +98,7 @@ devtools::install_github("BlakeRMills/MetBrewer")
 
 ### Moreau
 ![Moreau](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Moreau.png)
-- Listing to Come
+- Oedipus and the Sphinx, 1864, Gustave Moreau, French, [Link](https://www.metmuseum.org/art/collection/search/437153)
 ***
 
 ### Morgenstern
@@ -100,47 +108,47 @@ devtools::install_github("BlakeRMills/MetBrewer")
 
 ### Nattier
 ![Nattier](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Nattier.png)
-- Listing to Come
+- Madame Bergeret de Frouville as Diana, 1756, Jean Marc Nattier, French, [Link](Link)
 ***
 
-### NewKingdon
-![NewKingdon](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/NewKingdon.png)
-- Listing to Come
+### NewKingdom
+![NewKingdom](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/NewKingdon.png)
+- Blue-Painted Ibex Amphora from Malqata, ca. 1390–1353 B.C., New King, [Link](https://www.metmuseum.org/art/collection/search/544501)
 ***
 
 ### Pillement
 ![Pillement](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Pillement.png)
-- Listing to Come
+- A Shipwreck in a Storm, 1782, Jean Pillement, French, [Link](https://www.metmuseum.org/art/collection/search/437292)
 ***
 
 ### Pissaro
 ![Pissaro](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Pissaro.png)
-- Listing to Come
+- Washerwoman, Study, 1880, Camille Pissarro, French, [Link](https://www.metmuseum.org/art/collection/search/437303)
 ***
 
 ### Redon
 ![Redon](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Redon.png)
-- Listing to Come
+- Pandora, 1914, Odilon Redon, French, [Link](https://www.metmuseum.org/art/collection/search/437383)
 ***
 
 ### Renoir
 ![Renoir](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Renoir.png)
-- Listing to Come
+- Nini in the Garden (Nini Lopez), 1876, Auguste Renoir, French, [Link](https://www.metmuseum.org/art/collection/search/438010?searchField=All&amp;sortBy=Relevance&amp;ft=Renoir&amp;offset=0&amp;rpp=20&amp;pos=8)
 ***
 
 ### Robert
 ![Robert](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Robert.png)
-- Listing to Come
+- The Bathing Pool, Hubert Robert, French, [Link](https://www.metmuseum.org/art/collection/search/437473)
 ***
 
 ### Stevens
 ![Stevens](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Stevens.png)
-- Listing to Come
+- The Japanese Robe, 1872, Alfred Stevens, Belgian, [Link](https://www.metmuseum.org/art/collection/search/437756)
 ***
 
 ### Tara
 ![Tara](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Tara.png)
-- Listing to Come
+- Maharana Sarup Singh Inspects a Prize Stallion, 1845–46, Tara, Western India, Rajasthan, Mewar, [Link](https://www.metmuseum.org/art/collection/search/61429)
 ***
 
 ### Thomas
@@ -150,34 +158,32 @@ devtools::install_github("BlakeRMills/MetBrewer")
 
 ### Tiepolo
 ![Tiepolo](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Tiepolo.png)
-- Listing to Come
+- The Glorification of the Barbaro Family, 1750, Giovanni Battista Tiepolo, Italian, [Link](https://www.metmuseum.org/art/collection/search/437798)
 ***
 
 ### Troy
 ![Troy](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Troy.png)
-- Listing to Come
+- The Declaration of Love, 1724, Jean François de Troy, French, [Link](https://www.metmuseum.org/art/collection/search/438127)
 ***
 
 ### VanGogh1
 ![VanGogh1](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/VanGogh1.png)
-- Listing to Come
+- Cypresses, 1889, Vincent van Gogh, Dutch, [Link](https://www.metmuseum.org/art/collection/search/437980)
 ***
 
 ### VanGogh2
 ![VanGogh2](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/VanGogh2.png)
-- Listing to Come
+- Self-Portrait with a Straw Hat (obverse: The Potato Peeler), 1887, Vincent van Gogh, Dutch, [Link](https://www.metmuseum.org/art/collection/search/436532)
 ***
 
 ### Veronese
 ![Veronese](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Veronese.png)
-- Listing to Come
+- Mars and Venus United by Love, 1570s, Paolo Veronese, Italian, [Link](https://www.metmuseum.org/art/collection/search/437891)
 ***
 
 ### Wissing
 ![Wissing](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Wissing.png)
-- Listing to Come
-
-
+- Portrait of a Woman, 1687, Willem Wissing, Dutch, [Link](https://www.metmuseum.org/art/collection/search/437945)
 
 
 ## Functions
