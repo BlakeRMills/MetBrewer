@@ -39,7 +39,7 @@ devtools::install_github("BlakeRMills/MetBrewer")
 ***
 
 ### Gauguin
-![Gauguin](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Gaugin.png)
+![Gauguin](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Gauguin.png)
 - A Farm in Brittany, 1874, Paul Gauguin, French, [Link](https://www.metmuseum.org/art/collection/search/436448)
 ***
 
