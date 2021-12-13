@@ -113,7 +113,7 @@ devtools::install_github("BlakeRMills/MetBrewer")
 
 ### NewKingdom
 ![NewKingdom](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/NewKingdon.png)
-- Blue-Painted Ibex Amphora from Malqata, ca. 1390–1353 B.C., New King, [Link](https://www.metmuseum.org/art/collection/search/544501)
+- Blue-Painted Ibex Amphora from Malqata, ca. 1390–1353 B.C., New Kingdom, [Link](https://www.metmuseum.org/art/collection/search/544501)
 ***
 
 ### Pillement
