@@ -1,5 +1,15 @@
 function output = color_Mett(map, minColor)
-    
+% This function is based on Blake Roberts Mills code for R, to create colormaps based on different paintings from the Metropolitan Museum of Art.
+% You can check the project at https://github.com/BlakeRMills/MetBrewer/tree/main
+%   Inputs:
+%    map: the name of the map you want to use.
+%    minColor: the minimum color you want to use, if the selected map does not have enough colors, they will be interpolated.
+%   Outputs:
+%    output: the colormap.
+%   Example:
+%    output = color_Mett('Monet', 21);
+% MGG 13.12.21
+
 if nargin<2; minColor =1; end
     
     % Parse input
