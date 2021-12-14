@@ -1,4 +1,4 @@
-function output = color_Mett(map, minColor)
+function output = color_Mett(map, minColor, verbosity)
 % This function is based on Blake Roberts Mills code for R, to create colormaps based on different paintings from the Metropolitan Museum of Art.
 % You can check the project at https://github.com/BlakeRMills/MetBrewer/tree/main
 %   Inputs:
@@ -11,6 +11,7 @@ function output = color_Mett(map, minColor)
 % MGG 13.12.21
 
 if nargin<2; minColor =1; end
+if nargin<3; verbosity = false; end
     
     % Parse input
     validColorMaps = ["Austria", "Cassatt", "Degas", "Egypt", "Gauguin", "Greek",...
@@ -19,7 +20,7 @@ if nargin<2; minColor =1; end
     "Pillement", "Pissaro", "Redon", "Renoir", "Robert", "Stevens", "Tara",...
     "Thomas", "Tiepolo", "Troy", "VanGogh1", "VanGogh2", "Veronese","Wissing"];
     map= validatestring(map,validColorMaps);
-    fprintf(['color_Met>> Retrieving colormap ', upper(char(map)), '... \n']);
+    if verbosity; fprintf(['color_Met>> Retrieving colormap ', upper(char(map)), '... \n']);end
     
     % Anonymous function to convert from HEX to RGB, credits to Chad Greene
     % See hex2rgb.
@@ -71,8 +72,8 @@ if nargin<2; minColor =1; end
     
     % Interpolate colors in between 
     if size(c.([map]),1) < minColor
-        fprintf(['color_Met>> The color palette selected has only ', num2str(size(c.([map]),1)), ' colors \n']);
-        fprintf(['color_Met>> We will try to interpolate ', num2str(steps2int), ' colors in between. \n']);
+        if verbosity;fprintf(['color_Met>> The color palette selected has only ', num2str(size(c.([map]),1)), ' colors \n']);end
+        if verbosity;fprintf(['color_Met>> We will try to interpolate ', num2str(steps2int), ' colors in between. \n']);end
         k=1;
         for nColor = 1:size(c.([map]),1)-1
             output2(k, :) = output (nColor,:);
@@ -85,10 +86,12 @@ if nargin<2; minColor =1; end
             k = k+nSteps+1;
         end
         output2(k,:)= output(end,:);
-        fprintf(['color_Met>> The colormap has now: ', num2str(size(output2,1)), ' colors. \n']);
+        if verbosity;fprintf(['color_Met>> The colormap has now: ', num2str(size(output2,1)), ' colors. \n']);end
         output= output2;
     end
-    fprintf(['color_Met>> Done! \n']);
+    if verbosity;fprintf(['color_Met>> Done! \n']);end
 end
+
+
 
 
