@@ -16,14 +16,14 @@ MetPalettes <- list(
     Greek = list(c("#3c0d03", "#8d1c06", "#e67424", "#ed9b49", "#f5c34d"), c(2, 3, 5, 1, 4)),
     Hokusai = list(c("#6d2f20", "#b75347", "#df7e66", "#e09351", "#edc775", "#94b594", "#224b5e"), c(2, 7, 4, 6, 5, 1, 3)),
     Ingres= list(c("#041d2c", "#06314e", "#18527e", "#2e77ab", "#d1b252", "#a97f2f", "#7e5522", "#472c0b"), c(4, 5, 3, 6, 2, 7, 1, 8)),
-    Isfahan1 = list(c("#4e3910", "#845d29", "#d8c29d", "#4fb6ca", "#178f92", "#175f5d", "#1d1f54"), c(5, 2, 4, 6, 3, 7, 1)),
+    Isfahan1 = list(c("#4e3910", "#845d29", "#d8c29d", "#4fb6ca", "#178f92", "#175f5d", "#1d1f54"), c(5, 2, 4, 6, 1, 7, 3)),
     Isfahan2 = list(c("#d7aca1", "#ddc000", "#79ad41", "#34b6c6", "#4063a3"), c(4, 2, 3, 5, 1)),
     Juarez = list(c("#a82203", "#208cc0", "#f1af3a", "#cf5e4e", "#637b31", "#003967"), c(1, 2, 3, 4, 5, 6)),
     Klimt = list(c("#df9ed4", "#c93f55", "#eacc62", "#469d76", "#3c4b99", "#924099"), c(5, 2, 3, 4, 6, 1)),
     Manet = list(c("#3b2319", "#80521c", "#d29c44", "#ebc174", "#ede2cc", "#7ec5f4", "#4585b7", "#225e92", "#183571", "#43429b", "#5e65be"), c(8, 3, 10, 4, 7, 9, 11, 2, 6, 1, 5)),
     Monet = list(c("#4e6d58", "#749e89", "#abccbe", "#e3cacf", "#c399a2", "#9f6e71", "#41507b", "#7d87b2", "#c2cae3"), c(2, 5, 8, 3, 4, 9, 1, 6, 7)),
     Moreau = list(c("#421600", "#792504", "#bc7524", "#8dadca", "#527baa", "#104839", "#082844"), c(2, 5, 3, 4, 7, 1, 6)),
-    Morgenstern = list(c("#7c668c", "#b08ba5", "#dfbbc8", "#ffc680", "#ffb178", "#db8872", "#a56457"), c(6, 5, 4, 7, 3, 2, 1)),
+    Morgenstern = list(c("#7c668c", "#b08ba5", "#dfbbc8", "#ffc680", "#ffb178", "#db8872", "#a56457"), c(7, 5, 4, 6, 3, 2, 1)),
     Nattier = list(c("#52271c", "#944839", "#c08e39", "#7f793c", "#565c33", "#184948", "#022a2a"), c(1, 6, 5, 2, 3, 4, 7)),
     NewKingdom = list(c("#e1846c", "#9eb4e0", "#e6bb9e", "#9c6849", "#735852"), c(2, 1, 3, 4, 5)),
     Pillement = list(c("#a9845b", "#697852", "#738e8e", "#44636f", "#2b4655", "#0f252f"), c(4, 3, 2, 5, 1, 6)),
@@ -34,7 +34,7 @@ MetPalettes <- list(
     Stevens = list(c("#042e4e", "#307d7f", "#598c4c", "#ba5c3f", "#a13213", "#470c00"), c(4, 2, 3, 5, 1, 6)),
     Tara = list(c("#eab1c6", "#d35e17", "#e18a1f", "#e9b109", "#829d44"), c(1, 3, 2, 5, 4)),
     Thomas = list(c("#b24422", "#c44d76", "#4457a5", "#13315f", "#b1a1cc", "#59386c", "#447861", "#7caf5c"), c(3, 2, 8, 6, 1, 4, 7, 5)),
-    Tiepolo = list(c("#802417", "#c06636", "#ce9344", "#e8b960", "#646e3b", "#2b5851", "#508ea2", "#17486f"), c(1, 2, 8, 6, 3, 5, 7, 4)),
+    Tiepolo = list(c("#802417", "#c06636", "#ce9344", "#e8b960", "#646e3b", "#2b5851", "#508ea2", "#17486f"), c(1, 2, 8, 4, 3, 5, 7, 6)),
     Troy = list(c("#421401", "#6c1d0e", "#8b3a2b", "#c27668", "#7ba0b4", "#44728c", "#235070", "#0a2d46"), c(2, 7, 4, 5, 1, 8, 3, 6)),
     VanGogh1 = list(c("#2c2d54", "#434475", "#6b6ca3", "#969bc7", "#87bcbd", "#89ab7c", "#6f9954"), c(3, 5, 7, 4, 6, 2, 1)),
     VanGogh2 = list(c("#bd3106", "#d9700e", "#e9a00e", "#eebe04", "#5b7314", "#c3d6ce", "#89a6bb", "#454b87"), c(1, 5, 8, 2, 7, 4, 6, 3)),
@@ -92,7 +92,7 @@ met.brewer <- function(name, n, type = c("discrete", "continuous")) {
 
   out <- switch(type,
                 continuous = grDevices::colorRampPalette(palette[[1]])(n),
-                discrete = palette[[1]][sort(palette[[2]][1:n])],
+                discrete = palette[[1]][which(palette[[2]] %in% c(1:n)==TRUE)],
   )
   structure(out, class = "palette", name = name)
 
