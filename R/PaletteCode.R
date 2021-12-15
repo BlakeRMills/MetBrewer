@@ -137,6 +137,8 @@ colorblind_palettes <- c("Cassatt", "Egypt", "Greek", "Ingres", "Isfahan1", "Isf
 #' \code{Manet}, \code{Monet}, \code{Moreau}, \code{Morgenstern}, \code{Nattier}, \code{NewKingdom},
 #' \code{Pillement}, \code{Pissaro}, \code{Redon}, \code{Renoir}, \code{Robert}, \code{Stevens}, \code{Tara},
 #' \code{Thomas}, \code{Tiepolo}, \code{Troy}, \code{VanGogh1}, \code{VanGogh2}, \code{Veronese}, and \code{Wissing}
+#' @examples
+#' colorblind.friendly("Veronese")
 #' @return TRUE/FALSE if palette is colorblind-friendly
 #' @export
 colorblind.friendly <- function(palette.name){

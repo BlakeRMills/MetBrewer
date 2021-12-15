@@ -20,3 +20,6 @@ TRUE/FALSE if palette is colorblind-friendly
 \description{
 Checks whether a palette is colorblind-friendly.
 }
+\examples{
+colorblind.friendly("Veronese")
+}
