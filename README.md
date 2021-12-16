@@ -189,6 +189,8 @@ devtools::install_github("BlakeRMills/MetBrewer")
 
 ## Functions
 ```r
+You can retrieve palettes using various methods listed below. 
+
 met.brewer(name="VanGogh1",n=7,type="discrete")
 ```
 ![Ex1](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Examples/Example%201.png)
@@ -210,11 +212,50 @@ met.brewer("Troy",n=15,type="continuous")
 ```
 ![Ex4](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Examples/Example%204.png)
 
-
 ```r
 met.brewer("Hokusai",n=100)
 ```
 ![Ex5](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Examples/Example%205.png)
+
+### ggplot2 Examples
+
+Here are also some ways you can incorporate this package into {ggplot2}
+
+```r
+ggplot(data=iris, aes(x=Species, y=Petal.Length, fill=Species)) +
+  geom_violin() +
+  scale_fill_manual(values=met.brewer("Greek", 3))
+```
+![Ex6](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Examples/FillExample.png)
+
+```r
+ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
+  geom_point(size=2) +
+  scale_color_manual(values=met.brewer("Renoir", 3))
+```
+![Ex7](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Examples/ColorExample.png)
+
+```r
+ggplot(data=iris, aes(x=Species, y=Sepal.Width, color=Sepal.Width)) +
+  geom_point(size=3) +
+  scale_color_gradientn(colors=met.brewer("Isfahan1"))
+```
+![Ex8](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Examples/GradientColorExample.png)
+
+```r
+library(urbnmapr)
+countydata %>%
+  left_join(counties, by = "county_fips") %>%
+  filter(state_name =="Nebraska") %>%
+  ggplot(mapping=aes(long,lat,group = group, fill = horate)) +
+  geom_polygon(color="black",size=.25) +
+  scale_fill_gradientn(colors = met.brewer("Morgenstern")) +
+  coord_fixed() +
+  labs(fill="Homeownership rate") +
+  theme_void()
+```
+![Ex9](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Examples/GradientFillExample.png)
+
 
 ## Colorblind Friendly Checking
 The package has been updated to check for colorblind-friendlyness
