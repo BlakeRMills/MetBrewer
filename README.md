@@ -10,6 +10,7 @@ Twitter: [here](https://twitter.com/BlakeRobMills)<br /> LinkedIn: [here](https:
 [Installation](#install-package)  
 [Palettes](#palettes)  
 [Functions](#functions)  
+[Colorblind Checking](#colorblind-friendly-checking)  
 
 ## Install Package
 Currently, the package is only able to be downloaded through github
@@ -214,3 +215,19 @@ met.brewer("Troy",n=15,type="continuous")
 met.brewer("Hokusai",n=100)
 ```
 ![Ex5](https://github.com/BlakeRMills/MetBrewer/blob/main/Works%20and%20Palettes/Examples/Example%205.png)
+
+## Colorblind Friendly Checking
+The package has been updated to check for colorblind-friendlyness
+You can list out the colorblind-friendly palettes with the following code
+```r
+MetBrewer::colorblind_palettes
+
+ [1] "Cassatt"     "Egypt"       "Greek"       "Ingres"      "Isfahan1"    "Isfahan2"    "Morgenstern" "Pillement"  
+ [9] "Troy"        "Veronese"   
+```
+
+You can also test is a palettes is colorblind friendly using the function provided
+
+```r
+MetBrewer::colorblind.friendly("Ingres")
+```
