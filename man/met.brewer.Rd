@@ -8,11 +8,13 @@ met.brewer(name, n, type = c("discrete", "continuous"))
 }
 \arguments{
 \item{name}{Name of Palette. Choices are:
-\code{Austria}, \code{Cassatt}, \code{Degas}, \code{Egypt}, \code{Gauguin}, \code{Greek},
-\code{Hokusai}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2}, \code{Juarez}, \code{Klimt},
-\code{Manet}, \code{Monet}, \code{Moreau}, \code{Morgenstern}, \code{Nattier}, \code{NewKingdom},
-\code{Pillement}, \code{Pissaro}, \code{Redon}, \code{Renoir}, \code{Robert}, \code{Stevens}, \code{Tara},
-\code{Thomas}, \code{Tiepolo}, \code{Troy}, \code{VanGogh1}, \code{VanGogh2}, \code{Veronese}, and \code{Wissing}}
+\code{Austria}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas}, \code{Derain}, \code{Egypt},
+\code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1}, \code{Hokusai2}, \code{Hokusai3}, \code{Homer1},
+\code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2}, \code{Juarez}, \code{Klimt}, \code{Lakota},
+\code{Manet}, \code{Monet}, \code{Moreau}, \code{Morgenstern}, \code{Nattier}, \code{Navajo}, \code{NewKingdom},
+\code{Nizami}, \code{OKeeffe1}, \code{OKeeffe2}, \code{Peru1}, \code{Peru2}, \code{Pillement}, \code{Pissaro},
+\code{Redon}, \code{Renoir}, \code{Robert}, \code{Signac}, \code{Stevens}, \code{Tara}, \code{Thomas}, \code{Tiepolo},
+\code{Troy}, \code{Tsimshian}, \code{VanGogh1}, \code{VanGogh2}, \code{VanGogh3}, \code{Veronese}, and \code{Wissing}}
 
 \item{n}{Number of desired colors. If number of requested colors is beyond the scope of the palette,
 colors are automatically interpolated. If n is not provided, the length of the palette is used.}
@@ -24,11 +26,24 @@ interpolate between colors.}
 A vector of colors.
 }
 \description{
-These are a handful of color palettes from Met.
+Color palettes inspired by works at The Metropolitan Museum of Art. Complete list of palette colors
+and the works that inspired them can be found \href{https://github.com/BlakeRMills/MetBrewer}{on Github}.
+Use \code{\link{colorblind.friendly}} to check whether palettes are colorblind-friendly.
 }
 \examples{
 met.brewer("VanGogh1")
-met.brewer("Tiepolo", 6)
-met.brewer("Troy", 10, "continuous")
+
+library(ggplot2)
+ggplot(data=iris, aes(x=Species, y=Petal.Length, fill=Species)) +
+geom_violin() +
+scale_fill_manual(values=met.brewer("Greek", 3))
+
+ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
+geom_point(size=2) +
+scale_color_manual(values=met.brewer("Renoir", 3))
+
+ggplot(data=iris, aes(x=Species, y=Sepal.Width, color=Sepal.Width)) +
+geom_point(size=3) +
+scale_color_gradientn(colors=met.brewer("Isfahan1"))
 }
 \keyword{colors}

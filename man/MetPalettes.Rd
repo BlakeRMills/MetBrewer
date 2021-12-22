@@ -3,14 +3,22 @@
 \docType{data}
 \name{MetPalettes}
 \alias{MetPalettes}
-\title{Complete list of palettes}
+\title{Complete list of palettes.}
 \format{
-An object of class \code{list} of length 33.
+An object of class \code{list} of length 50.
 }
 \usage{
 MetPalettes
 }
 \description{
+Use names(MetPalettes) to return all possible palette names. Current choices are:
+\code{Austria}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas}, \code{Derain}, \code{Egypt},
+\code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1}, \code{Hokusai2}, \code{Hokusai3}, \code{Homer1},
+\code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2}, \code{Juarez}, \code{Klimt}, \code{Lakota},
+\code{Manet}, \code{Monet}, \code{Moreau}, \code{Morgenstern}, \code{Nattier}, \code{Navajo}, \code{NewKingdom},
+\code{Nizami}, \code{OKeeffe1}, \code{OKeeffe2}, \code{Peru1}, \code{Peru2}, \code{Pillement}, \code{Pissaro},
+\code{Redon}, \code{Renoir}, \code{Robert}, \code{Signac}, \code{Stevens}, \code{Tara}, \code{Thomas}, \code{Tiepolo},
+\code{Troy}, \code{Tsimshian}, \code{VanGogh1}, \code{VanGogh2}, \code{VanGogh3}, \code{Veronese}, and \code{Wissing}
 Use \code{\link{met.brewer}} to construct palettes.
 }
 \keyword{datasets}

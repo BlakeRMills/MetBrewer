@@ -4,18 +4,20 @@
 \alias{colorblind.friendly}
 \title{Colorblind-Friendly Palette Check}
 \usage{
-colorblind.friendly(palette.name)
+colorblind.friendly(palette_name)
 }
 \arguments{
-\item{name}{Name of Palette. Choices are:
-\code{Austria}, \code{Cassatt}, \code{Degas}, \code{Egypt}, \code{Gauguin}, \code{Greek},
-\code{Hokusai}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2}, \code{Juarez}, \code{Klimt},
-\code{Manet}, \code{Monet}, \code{Moreau}, \code{Morgenstern}, \code{Nattier}, \code{NewKingdom},
-\code{Pillement}, \code{Pissaro}, \code{Redon}, \code{Renoir}, \code{Robert}, \code{Stevens}, \code{Tara},
-\code{Thomas}, \code{Tiepolo}, \code{Troy}, \code{VanGogh1}, \code{VanGogh2}, \code{Veronese}, and \code{Wissing}}
+\item{palette_name}{Name of Palette. Choices are:
+\code{Austria}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas}, \code{Derain}, \code{Egypt},
+\code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1}, \code{Hokusai2}, \code{Hokusai3}, \code{Homer1},
+\code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2}, \code{Juarez}, \code{Klimt}, \code{Lakota},
+\code{Manet}, \code{Monet}, \code{Moreau}, \code{Morgenstern}, \code{Nattier}, \code{Navajo}, \code{NewKingdom},
+\code{Nizami}, \code{OKeeffe1}, \code{OKeeffe2}, \code{Peru1}, \code{Peru2}, \code{Pillement}, \code{Pissaro},
+\code{Redon}, \code{Renoir}, \code{Robert}, \code{Signac}, \code{Stevens}, \code{Tara}, \code{Thomas}, \code{Tiepolo},
+\code{Troy}, \code{Tsimshian}, \code{VanGogh1}, \code{VanGogh2}, \code{VanGogh3}, \code{Veronese}, and \code{Wissing}}
 }
 \value{
-TRUE/FALSE if palette is colorblind-friendly
+TRUE/FALSE value whether palette is colorblind-friendly
 }
 \description{
 Checks whether a palette is colorblind-friendly.
