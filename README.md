@@ -32,6 +32,11 @@ devtools::install_github("BlakeRMills/MetBrewer")
 - The Cup of Tea, 1880-1881, Mary Cassatt, American, [Link](https://www.metmuseum.org/art/collection/search/10388)
 ***
 
+### Cassatt2
+![Cassatt2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Cassatt2.png)
+- Lilacs in a Window (Vase de Lilas a la Fenetre), 1880–83, Mary Cassatt, American, [Link](https://www.metmuseum.org/art/collection/search/13758)
+***
+
 ### Cross
 ![Cross](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Cross.png)
 - Cap Nègre, 1909, Henri-Edmond Cross, French, [Link](https://www.metmuseum.org/art/collection/search/459734)
@@ -40,6 +45,11 @@ devtools::install_github("BlakeRMills/MetBrewer")
 ### Degas
 ![Degas](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Degas.png)
 - The Rehearsal of the Ballet Onstage, 1874, Edgar Degas, French, [Link](https://www.metmuseum.org/art/collection/search/436155)
+***
+
+### Derain
+![Derain](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Derain.png)
+- The Palace of Westminster, 1906–1907, André Derain, French, [Link](https://www.metmuseum.org/art/collection/search/459144)
 ***
 
 ### Egypt
@@ -57,9 +67,34 @@ devtools::install_github("BlakeRMills/MetBrewer")
 - Terracotta neck-amphora (jar), ca. 550–540 B.C., Greek, [Link](https://www.metmuseum.org/art/collection/search/254199)
 ***
 
+### Hiroshige
+![Hiroshige](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Hiroshige.png)
+- Sailing Boats Returning to Yabase, Lake Biwa, 1835, Utagawa Hiroshige, Japanese, [Link](https://www.metmuseum.org/art/collection/search/36534)
+***
+
 ### Hokusai1
 ![Hokusai](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Hokusai1.png)
 - Poem by Gon-Chūnagon Sadaie, from the series One Hundred Poems Explained by the Nurse (Hyakunin isshu uba ga etoki), 1760–1849, Katsushika Hokusai, Japanese, [Link](https://www.metmuseum.org/art/collection/search/56157)
+***
+
+### Hokusai2
+![Hokusai2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Hokusai2.png)
+- Lake Suwa in Shinano Province (Shinshū Suwako), from the series Thirty-six Views of Mount Fuji (Fugaku sanjūrokkei), 1830-32, Katsushika Hokusai, Japanese, [Link](https://www.metmuseum.org/art/collection/search/56240)
+***
+
+### Hokusai3
+![Hokusai3](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Hokusai3.png)
+- Yōrō Waterfall in Mino Province (Mino no Yōrō no taki), from the series A Tour of Waterfalls in Various Provinces (Shokoku taki meguri), 1832, Katsushika Hokusai, Japanese, [Link](https://www.metmuseum.org/art/collection/search/56146)
+***
+
+### Homer1
+![Homer1](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Homer1.png)
+- The Veteran in a New Field, 1865, Winslow Homer, American, [Link](https://www.metmuseum.org/art/collection/search/11145)
+***
+
+### Homer2
+![Homer2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Homer2.png)
+- Flower Garden and Bungalow, Bermuda, 1899, Winslow Homer, American, [Link](https://www.metmuseum.org/art/collection/search/11121)
 ***
 
 ### Ingres
@@ -87,6 +122,11 @@ devtools::install_github("BlakeRMills/MetBrewer")
 - Mäda Primavesi (1903–2000), 1912-13, Gustav Klimt, Austrian, [Link](https://www.metmuseum.org/art/collection/search/436819)
 ***
 
+### Lakota
+![Lakota](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Lakota.png)
+- Dress, 1870, Lakota/Teton Sioux, Native American, [Link](https://www.metmuseum.org/art/collection/search/751512)
+***
+
 ### Manet
 ![Manet](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Manet.png)
 - Boating, 1874, Edouard Manet, French, [Link](https://www.metmuseum.org/art/collection/search/436947?searchField=All&amp;sortBy=Relevance&amp;ft=manet&amp;offset=0&amp;rpp=20&amp;pos=8)
@@ -112,9 +152,39 @@ devtools::install_github("BlakeRMills/MetBrewer")
 - Madame Bergeret de Frouville as Diana, 1756, Jean Marc Nattier, French, [Link](Link)
 ***
 
+### Navajo
+![Navajo](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Navajo.png)
+- Serape, 1865–70, Navajo, [Link](https://www.metmuseum.org/art/collection/search/823657)
+***
+
 ### NewKingdom
 ![NewKingdom](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/NewKingdom.png)
 - Blue-Painted Ibex Amphora from Malqata, ca. 1390–1353 B.C., New Kingdom, [Link](https://www.metmuseum.org/art/collection/search/544501)
+***
+
+### Nizami
+![Nizami](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Nizami.png)
+- "Laila and Majnun in School", Folio 129 from a Khamsa (Quintet) of Nizami of Ganja, A.H. 931/A.D. 1524–25, Nizami, Made in present-day Afghanistan, Herat, [Link](https://www.metmuseum.org/art/collection/search/446603)
+***
+
+### OKeeffe1
+![OKeeffe1](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/OKeeffe1.png)
+- From the Faraway, Nearby, 1937, Georgia O'Keeffe, American, [Link](https://www.metmuseum.org/art/collection/search/489064)
+***
+
+### OKeeffe2
+![OKeeffe2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/OKeeffe2.png)
+- Red and Yellow Cliffs, 1940, Georgia O'Keeffe, American, [Link](https://www.metmuseum.org/art/collection/search/484833)
+***
+
+### Peru1
+![Peru1](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Peru1.png)
+- Ear Ornament, Winged Runner, A.D. 400–700, Moche, Peruvian, [Link](https://www.metmuseum.org/art/collection/search/309428)
+***
+
+### Peru2
+![Peru2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Peru2.png)
+- Tunic with Confronting Catfish, A.D. 800–850, Nasca-Wari, Peruvian, [Link](https://www.metmuseum.org/art/collection/search/307975)
 ***
 
 ### Pillement
@@ -142,6 +212,11 @@ devtools::install_github("BlakeRMills/MetBrewer")
 - The Bathing Pool, Hubert Robert, French, [Link](https://www.metmuseum.org/art/collection/search/437473)
 ***
 
+### Signac
+![Signac](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Signac.png)
+- Notre-Dame-de-la-Garde (La Bonne-Mère), Marseilles, 1905-06, Paul Signac, French, [Link](https://www.metmuseum.org/art/collection/search/437672)
+***
+
 ### Stevens
 ![Stevens](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Stevens.png)
 - The Japanese Robe, 1872, Alfred Stevens, Belgian, [Link](https://www.metmuseum.org/art/collection/search/437756)
@@ -167,6 +242,11 @@ devtools::install_github("BlakeRMills/MetBrewer")
 - The Declaration of Love, 1724, Jean François de Troy, French, [Link](https://www.metmuseum.org/art/collection/search/438127)
 ***
 
+### Tsimshian
+![Tsimshian](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Tsimshian.png)
+- Headdress frontlet, 1820–40, Tsimshian, Native American (Canadian), [Link](https://www.metmuseum.org/art/collection/search/717587)
+***
+
 ### VanGogh1
 ![VanGogh1](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/VanGogh1.png)
 - Cypresses, 1889, Vincent van Gogh, Dutch, [Link](https://www.metmuseum.org/art/collection/search/437980)
@@ -175,6 +255,11 @@ devtools::install_github("BlakeRMills/MetBrewer")
 ### VanGogh2
 ![VanGogh2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/VanGogh2.png)
 - Self-Portrait with a Straw Hat (obverse: The Potato Peeler), 1887, Vincent van Gogh, Dutch, [Link](https://www.metmuseum.org/art/collection/search/436532)
+***
+
+### VanGogh3
+![VanGogh3](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/VanGogh3.png)
+- First Steps, after Millet, 1890, Vincent van Gogh, Dutch, [Link](https://www.metmuseum.org/art/collection/search/436526)
 ***
 
 ### Veronese
