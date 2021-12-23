@@ -7,18 +7,36 @@ For requests, questions, comments, concerns, or any thing else, feel free to rea
 Twitter: [here](https://twitter.com/BlakeRobMills)<br /> LinkedIn: [here](https://www.linkedin.com/in/blake-m-79a74513a/) <br />Email: brm2143@columbia.edu
 
 ***
-[Installation](#install-package)  
-[Palettes](#palettes)  
-[Functions](#functions)  
-[Colorblind Checking](#colorblind-friendly-checking)  
+[Installation](#install-package)
+[Palettes](#palettes)
+[Functions](#functions)
+[Colorblind Checking](#colorblind-friendly-checking)
 
 ## Install Package
 Currently, the package is only able to be downloaded through github
+
+### R
 ```r
-install.packages("devtools") 
-devtools::install_github("BlakeRMills/MetBrewer") 
+install.packages("devtools")
+devtools::install_github("BlakeRMills/MetBrewer")
 ```
 
+
+### Python
+Install the package under the `Python/` directory directly:
+```
+python setup.py install
+```
+or via pip:
+```
+pip install .
+```
+or place the file into your source directory.
+
+Use it in your code:
+```python
+import met_palettes
+```
 
 ## Palettes
 
@@ -274,7 +292,7 @@ devtools::install_github("BlakeRMills/MetBrewer")
 
 ## Functions
 ```r
-You can retrieve palettes using various methods listed below. 
+You can retrieve palettes using various methods listed below.
 
 met.brewer(name="VanGogh1",n=7,type="discrete")
 ```
@@ -348,8 +366,8 @@ You can list out the colorblind-friendly palettes with the following code
 ```r
 MetBrewer::colorblind_palettes
 
- [1] "Cassatt1"    "Cassatt2"    "Derain"      "Egypt"       "Greek"       "Hiroshige"   "Hokusai2"    "Hokusai3"    "Ingres"     
-[10] "Isfahan1"    "Isfahan2"    "Morgenstern" "OKeeffe1"    "OKeeffe2"    "Pillement"   "Troy"        "VanGogh3"    "Veronese"  
+ [1] "Cassatt1"    "Cassatt2"    "Derain"      "Egypt"       "Greek"       "Hiroshige"   "Hokusai2"    "Hokusai3"    "Ingres"
+[10] "Isfahan1"    "Isfahan2"    "Morgenstern" "OKeeffe1"    "OKeeffe2"    "Pillement"   "Troy"        "VanGogh3"    "Veronese"
 ```
 
 You can also test is a palettes is colorblind friendly using the function provided
