@@ -63,7 +63,7 @@ def met_brew(name, n=None, brew_type="discrete"):
     palette = MET_PALETTES.get(name)
 
     if not brew_type or type(name) in (int, float):
-        raise Exception(f"Palette {name} does not exist")
+        raise Exception(f"Palette {name} does not exist.")
 
     if not n:
         n = len(palette["colors"])
@@ -76,7 +76,7 @@ def met_brew(name, n=None, brew_type="discrete"):
             brew_type = "discrete"
 
     if brew_type == "discrete" and n > len(palette["colors"]):
-        Exception(f"Number ({n}) of requested colors greater than what discrete can offer, use as continuous instead.")
+        raise Exception(f"Number ({n}) of requested colors greater than what discrete can offer, use as continuous instead.")
 
     out = list()
     if brew_type == "continuous":
@@ -105,6 +105,9 @@ def met_brew(name, n=None, brew_type="discrete"):
 
 
 def is_colorblind_friendly(name):
+
+    if name not in MET_PALETTES:
+        raise Exception(f"Palette {name} does not exist.")
 
     return name in COLORBLIND_PALETTES_NAMES
 

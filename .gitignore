@@ -9,6 +9,7 @@ __pycache__/
 dist/
 build/
 *.egg-info/
+pyvenv/
 
 # IDE
 .vscode/
