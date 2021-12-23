@@ -116,7 +116,7 @@ if __name__ == "__main__":
 
     import matplotlib.pyplot as plt
 
-    colors = met_brew("VanGogh1")
+    colors = met_brew(name="VanGogh1")
 
     plt.figure()
     for i, color in enumerate(colors):
@@ -124,7 +124,7 @@ if __name__ == "__main__":
 
     plt.show()
 
-    colors = met_brew("VanGogh1", 123, "continuous")
+    colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 
     plt.figure()
     for i, color in enumerate(colors):
