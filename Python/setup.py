@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="MetBrewer",
-    version="0.0",
+    version="1.0",
     requires=[
         "colour",
         "matplotlib"
