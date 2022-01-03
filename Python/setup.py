@@ -1,10 +1,10 @@
 from setuptools import setup
 
 setup(
-    name="MetBrewer",
+    name="met-brewer",
     version="1.0",
-    requires=[
-        "colour",
-        "matplotlib"
+    install_requires=[
+        "colour>=0.1.5",
+        "matplotlib>=3.5.1"
     ]
 )
