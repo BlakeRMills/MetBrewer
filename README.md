@@ -13,8 +13,10 @@ Twitter: [here](https://twitter.com/BlakeRobMills)<br /> LinkedIn: [here](https:
 [Colorblind Checking](#colorblind-friendly-checking)  
 
 ## Install Package
-Currently, the package is only able to be downloaded through github
+MetBrewer is now able to be downloaded directly through R. You can still download through GitHub as well. 
 ```r
+install.packages("MetBrewer")
+
 install.packages("devtools") 
 devtools::install_github("BlakeRMills/MetBrewer") 
 ```
