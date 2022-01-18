@@ -2,6 +2,8 @@
 
 S3method(print,palette)
 export(MetPalettes)
+export(colorblind.friendly)
+export(colorblind_palettes)
 export(met.brewer)
 importFrom(grDevices,rgb)
 importFrom(graphics,image)

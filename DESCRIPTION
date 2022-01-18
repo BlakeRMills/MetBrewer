@@ -4,7 +4,7 @@ Title: Color Palettes Inspired by Works at the Metropolitan Museum of Art
 Version: 0.1.0
 Author: Blake Robert Mills
 Maintainer: Blake Robert Mills <blakerobertmills@gmail.com>
-Description: Palettes Inspired by Works at the Metropolitan Museum of Art in New York
+Description: Palettes Inspired by Works at the Metropolitan Museum of Art in New York. Currently contains 50 color schemes and checks for colorblind-friendliness of palettes. Colorblind accessibility checked using the '{colorblindcheck} package by Jakub Nowosad'<https://nowosad.github.io/colorblindcheck/>.
 License: CC0
 Encoding: UTF-8
 LazyData: true
