@@ -13,18 +13,18 @@ Twitter: [here](https://twitter.com/BlakeRobMills)<br /> LinkedIn: [here](https:
 [Colorblind Checking](#colorblind-friendly-checking)
 
 ## Install Package
-Currently, the package is only able to be downloaded through github
-
 ### R
+MetBrewer is now able to be downloaded directly through R. You can still download through GitHub as well. 
 ```r
-install.packages("devtools")
-devtools::install_github("BlakeRMills/MetBrewer")
-```
+install.packages("MetBrewer")
 
+install.packages("devtools") 
+devtools::install_github("BlakeRMills/MetBrewer") 
+```
 
 ### Python
 Install the package under the `Python/` directory directly:
-```
+
 python setup.py install
 ```
 or via pip:
@@ -49,11 +49,13 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ### Cassatt1
 ![Cassatt](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Cassatt1.png)
 - The Cup of Tea, 1880-1881, Mary Cassatt, American, [Link](https://www.metmuseum.org/art/collection/search/10388)
+- Colorblind-Friendly
 ***
 
 ### Cassatt2
 ![Cassatt2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Cassatt2.png)
 - Lilacs in a Window (Vase de Lilas a la Fenetre), 1880–83, Mary Cassatt, American, [Link](https://www.metmuseum.org/art/collection/search/13758)
+- Colorblind-Friendly
 ***
 
 ### Cross
@@ -69,11 +71,13 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ### Derain
 ![Derain](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Derain.png)
 - The Palace of Westminster, 1906–1907, André Derain, French, [Link](https://www.metmuseum.org/art/collection/search/459144)
+- Colorblind-Friendly
 ***
 
 ### Egypt
 ![Egypt](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Egypt.png)
 - The King with Isis, Tomb of Haremhab, A.D. 1910–1911; original ca. 1323–1295 B.C., Twentieth Century; original New Kingdom, [Link](https://www.metmuseum.org/art/collection/search/557794?searchField=All&amp;sortBy=Relevance&amp;deptids=10&amp;ao=on&amp;ft=*&amp;offset=0&amp;rpp=80&amp;pos=63)
+- Colorblind-Friendly
 ***
 
 ### Gauguin
@@ -84,11 +88,13 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ### Greek
 ![Greek](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Greek.png)
 - Terracotta neck-amphora (jar), ca. 550–540 B.C., Greek, [Link](https://www.metmuseum.org/art/collection/search/254199)
+- Colorblind-Friendly
 ***
 
 ### Hiroshige
 ![Hiroshige](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Hiroshige.png)
 - Sailing Boats Returning to Yabase, Lake Biwa, 1835, Utagawa Hiroshige, Japanese, [Link](https://www.metmuseum.org/art/collection/search/36534)
+- Colorblind-Friendly
 ***
 
 ### Hokusai1
@@ -99,11 +105,13 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ### Hokusai2
 ![Hokusai2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Hokusai2.png)
 - Lake Suwa in Shinano Province (Shinshū Suwako), from the series Thirty-six Views of Mount Fuji (Fugaku sanjūrokkei), 1830-32, Katsushika Hokusai, Japanese, [Link](https://www.metmuseum.org/art/collection/search/56240)
+- Colorblind-Friendly
 ***
 
 ### Hokusai3
 ![Hokusai3](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Hokusai3.png)
 - Yōrō Waterfall in Mino Province (Mino no Yōrō no taki), from the series A Tour of Waterfalls in Various Provinces (Shokoku taki meguri), 1832, Katsushika Hokusai, Japanese, [Link](https://www.metmuseum.org/art/collection/search/56146)
+- Colorblind-Friendly
 ***
 
 ### Homer1
@@ -119,16 +127,19 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ### Ingres
 ![Ingres](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Ingres.png)
 - Joséphine-Éléonore-Marie-Pauline de Galard de Brassac de Béarn (1825–1860), Princesse de Broglie, 1851–53, Jean Auguste Dominique Ingres, French, [Link](https://www.metmuseum.org/art/collection/search/459106)
+- Colorblind-Friendly
 ***
 
 ### Isfahan1
 ![Isfahan1](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Isfahan1.png)
 - Mihrab (Prayer Niche), dated A.H. 755/ A.D. 1354–55,  From Iran, Isfahan, [Link](https://www.metmuseum.org/art/collection/search/449537?searchField=All&amp;sortBy=Relevance&amp;ft=Mihrab&amp;offset=0&amp;rpp=20&amp;pos=1)
+- Colorblind-Friendly
 ***
 
 ### Isfahan2
 ![Isfahan2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Isfahan2.png)
 - Garden Gathering, 1640–50, From Iran, Isfahan, [Link](https://www.metmuseum.org/art/collection/search/455082)
+- Colorblind-Friendly
 ***
 
 ### Juarez
@@ -164,6 +175,7 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ### Morgenstern
 ![Morgenstern](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Morgenstern.png)
 - Jungfrau, Mönch, and Eiger, 1851, Carl Morgenstern, German, [Link](https://www.metmuseum.org/art/collection/search/440360)
+- Colorblind-Friendly
 ***
 
 ### Nattier
@@ -189,11 +201,13 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ### OKeeffe1
 ![OKeeffe1](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/OKeeffe1.png)
 - From the Faraway, Nearby, 1937, Georgia O'Keeffe, American, [Link](https://www.metmuseum.org/art/collection/search/489064)
+- Colorblind-Friendly
 ***
 
 ### OKeeffe2
 ![OKeeffe2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/OKeeffe2.png)
 - Red and Yellow Cliffs, 1940, Georgia O'Keeffe, American, [Link](https://www.metmuseum.org/art/collection/search/484833)
+- Colorblind-Friendly
 ***
 
 ### Peru1
@@ -209,6 +223,7 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ### Pillement
 ![Pillement](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Pillement.png)
 - A Shipwreck in a Storm, 1782, Jean Pillement, French, [Link](https://www.metmuseum.org/art/collection/search/437292)
+- Colorblind-Friendly
 ***
 
 ### Pissaro
@@ -259,6 +274,7 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ### Troy
 ![Troy](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Troy.png)
 - The Declaration of Love, 1724, Jean François de Troy, French, [Link](https://www.metmuseum.org/art/collection/search/438127)
+- Colorblind-Friendly
 ***
 
 ### Tsimshian
@@ -279,11 +295,13 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ### VanGogh3
 ![VanGogh3](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/VanGogh3.png)
 - First Steps, after Millet, 1890, Vincent van Gogh, Dutch, [Link](https://www.metmuseum.org/art/collection/search/436526)
+- Colorblind-Friendly
 ***
 
 ### Veronese
 ![Veronese](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Veronese.png)
 - Mars and Venus United by Love, 1570s, Paolo Veronese, Italian, [Link](https://www.metmuseum.org/art/collection/search/437891)
+- Colorblind-Friendly
 ***
 
 ### Wissing
