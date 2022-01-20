@@ -1,4 +1,4 @@
-function output = color_Mett(map, minColor, verbosity)
+function output = MetBrewer(map, minColor, verbosity)
 % This function is based on Blake Roberts Mills code for R, to create colormaps based on different paintings from the Metropolitan Museum of Art.
 % You can check the project at https://github.com/BlakeRMills/MetBrewer/tree/main
 % Inputs:
@@ -23,7 +23,7 @@ if nargin<3; verbosity = false; end
     validColorMaps = ["Austria", "Cassatt1","Cassatt2","Cross","Degas","Derain","Egypt","Gauguin", "Greek",...
     "Hiroshige","Hokusai1","Hokusai2","Hokusai3","Homer1", "Homer2", "Ingres", "Isfahan1", "Isfahan2", ...
     "Juarez", "Klimt","Lakota","Manet", "Monet", "Moreau", "Morgenstern", "Nattier","Navajo", "NewKingdom","Nizami"...
-    "OKeffe1","OKeffe2","Peru1","Peru2","Pillement", "Pissaro", "Redon", "Renoir", "Robert", "Signac" "Stevens", "Tara",...
+    "OKeeffe1","OKeeffe2","Peru1","Peru2","Pillement", "Pissaro", "Redon", "Renoir", "Robert", "Signac" "Stevens", "Tara",...
     "Tsimshian","Thomas", "Tiepolo", "Troy", "VanGogh1", "VanGogh2", "VanGogh3","Veronese","Wissing"];
     map= validatestring(map,validColorMaps);
     if verbosity; fprintf(['color_Met>> Retrieving colormap ', upper(char(map)), '... \n']);end
@@ -34,42 +34,7 @@ if nargin<3; verbosity = false; end
     
     % This color palet was originally created for R by Blake Robert Mills.
     % See https://github.com/BlakeRMills/MetBrewer/tree/main
-   function output = color_Mett(map, minColor, verbosity)
-% This function is based on Blake Roberts Mills code for R, to create colormaps based on different paintings from the Metropolitan Museum of Art.
-% You can check the project at https://github.com/BlakeRMills/MetBrewer/tree/main
-% Inputs:
-%   map: the name of the map you want to use.
-%   minColor: the minimum color you want to use, if the selected map does not have enough colors, they will be interpolated.
-% Outputs:
-%   output: the colormap.
-% Example:
-%   output = color_Mett('Monet', 21);
-% validColorMaps = ["Austria", "Cassatt1","Cassatt2","Cross","Degas","Derain","Egypt","Gauguin", "Greek",...
-%     "Hiroshige","Hokusai1","Hokusai2","Hokusai3","Homer1", "Homer2", "Ingres", "Isfahan1", "Isfahan2", ...
-%     "Juarez", "Klimt","Lakota","Manet", "Monet", "Moreau", "Morgenstern", "Nattier","Navajo", "NewKingdom","Nizami"...
-%     "OKeffe1","OKeffe2","Peru1","Peru2","Pillement", "Pissaro", "Redon", "Renoir", "Robert", "Signac" "Stevens", "Tara",...
-%     "Tsimshian","Thomas", "Tiepolo", "Troy", "VanGogh1", "VanGogh2", "VanGogh3","Veronese","Wissing"];
-% MGG 13.12.21
-% 18.10.22 Added missing color palettes
-
-if nargin<2; minColor = 1; end
-if nargin<3; verbosity = false; end
-    
-    % Parse input
-    validColorMaps = ["Austria", "Cassatt1","Cassatt2","Cross","Degas","Derain","Egypt","Gauguin", "Greek",...
-    "Hiroshige","Hokusai1","Hokusai2","Hokusai3","Homer1", "Homer2", "Ingres", "Isfahan1", "Isfahan2", ...
-    "Juarez", "Klimt","Lakota","Manet", "Monet", "Moreau", "Morgenstern", "Nattier","Navajo", "NewKingdom","Nizami"...
-    "OKeffe1","OKeffe2","Peru1","Peru2","Pillement", "Pissaro", "Redon", "Renoir", "Robert", "Signac" "Stevens", "Tara",...
-    "Tsimshian","Thomas", "Tiepolo", "Troy", "VanGogh1", "VanGogh2", "VanGogh3","Veronese","Wissing"];
-    map= validatestring(map,validColorMaps);
-    if verbosity; fprintf(['color_Met>> Retrieving colormap ', upper(char(map)), '... \n']);end
-    
-    % Anonymous function to convert from HEX to RGB, credits to Chad Greene
-    % See hex2rgb.
-    rgb = @(hex)(reshape(sscanf(strrep(hex, '#','').','%2x'),3,[]).'/255);
-    
-    % This color palet was originally created for R by Blake Robert Mills.
-    % See https://github.com/BlakeRMills/MetBrewer/tree/main
+    c = struct();
     c.Austria = {'#a40000'; '#16317d'; '#007e2f'; '#ffcd12'; '#b86092'; '#721b3e'; '#00b7a7'};
     c.Cassatt1 = {'#b1615c'; '#d88782'; '#e3aba7'; '#edd7d9'; '#c9c9dd'; '#9d9dc7'; '#8282aa'; '#5a5a83'};
     c.Cassatt2 = {'#2d223c'; '#574571'; '#90719f'; '#b695bc'; '#dec5da'; '#c1d1aa'; '#7fa074'; '#466c4b'; '#2c4b27'; '#0e2810'};
@@ -99,8 +64,8 @@ if nargin<3; verbosity = false; end
     c.Navajo = {'#660d20'; '#e59a52'; '#edce79'; '#094568'; '#e1c59a'};
     c.NewKingdom = {'#e1846c'; '#9eb4e0'; '#e6bb9e'; '#9c6849'; '#735852'}; 
     c.Nizami = {'#dd7867'; '#b83326'; '#c8570d'; '#edb144'; '#8cc8bc'; '#7da7ea'; '#5773c0'; '#1d4497'};
-    c.OKeefe1 = {'#6b200c'; '#973d21'; '#da6c42'; '#ee956a'; '#fbc2a9'; '#f6f2ee'; '#bad6f9'; '#7db0ea'; '#447fdd'; '#225bb2'; '#133e7e'};
-    c.OKeffe2 = {'#fbe3c2'; '#f2c88f'; '#ecb27d'; '#e69c6b'; '#d37750'; '#b9563f'; '#92351e'};
+    c.OKeeffe1 = {'#6b200c'; '#973d21'; '#da6c42'; '#ee956a'; '#fbc2a9'; '#f6f2ee'; '#bad6f9'; '#7db0ea'; '#447fdd'; '#225bb2'; '#133e7e'};
+    c.OKeeffe2 = {'#fbe3c2'; '#f2c88f'; '#ecb27d'; '#e69c6b'; '#d37750'; '#b9563f'; '#92351e'};
     c.Peru1 = {'#b5361c'; '#e35e28'; '#1c9d7c'; '#31c7ba'; '#369cc9'; '#3a507f'};
     c.Peru2 = {'#65150b'; '#961f1f'; '#c0431f'; '#b36c06'; '#f19425'; '#c59349'; '#533d14'};
     c.Pillement = {'#a9845b'; '#697852'; '#738e8e'; '#44636f'; '#2b4655'; '#0f252f'}; 
@@ -151,35 +116,18 @@ if nargin<3; verbosity = false; end
     if verbosity;fprintf(['color_Met>> Done! \n']);end
 end
 
-
-
+function demo(c)
+fnms = fieldnames(c);
+figure();
+    for indx= 1:size(fnms,1) 
     
-    % Calculate how many steps in between are needed
-    if size(c.([map]),1) < minColor
-       steps2int = ceil(minColor/size(c.([map]),1));
+    subplot(ceil(sqrt(size(fnms,1))),floor(sqrt(size(fnms,1))),indx);
+    hclb = colorbar('location','south');
+    hclb.Ticks= '';
+    hclb.Position(3 = 0.05;
+    colormap(gca, MetBrewer(fnms{indx}, size(c.([fnms{indx}]),1)));
+    axis off;
+    title(fnms{indx});
     end
-    
-    % Generate matrix as output
-    output = cell2mat(cellfun(rgb, c.([map]), 'UniformOutput', false));
-    
-    % Interpolate colors in between 
-    if size(c.([map]),1) < minColor
-        if verbosity;fprintf(['color_Met>> The color palette selected has only ', num2str(size(c.([map]),1)), ' colors \n']);end
-        if verbosity;fprintf(['color_Met>> We will try to interpolate ', num2str(steps2int), ' colors in between. \n']);end
-        k=1;
-        for nColor = 1:size(c.([map]),1)-1
-            output2(k, :) = output (nColor,:);
-            for nSteps = 1:steps2int
-                R = interp1([1;2],[output(nColor,1); output(nColor+1,1)],[1+1/(steps2int+1)*nSteps],'linear','extrap');
-                G = interp1([1;2],[output(nColor,2); output(nColor+1,2)],[1+1/(steps2int+1)*nSteps],'linear','extrap');
-                B = interp1([1;2],[output(nColor,3); output(nColor+1,3)],[1+1/(steps2int+1)*nSteps],'linear','extrap');
-                output2(k+nSteps,:) = [R,G,B];
-            end
-            k = k+nSteps+1;
-        end
-        output2(k,:)= output(end,:);
-        if verbosity;fprintf(['color_Met>> The colormap has now: ', num2str(size(output2,1)), ' colors. \n']);end
-        output= output2;
-    end
-    if verbosity;fprintf(['color_Met>> Done! \n']);end
 end
+
