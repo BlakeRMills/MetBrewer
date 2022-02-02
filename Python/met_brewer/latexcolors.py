@@ -1,44 +1,38 @@
 from palettes import MET_PALETTES
 
-def replace_numbers_in_p_name(p_name):
-    if not p_name[-1].isnumeric():
-        return p_name
-    else:
-        if not p_name[-2].isnumeric():
-            return p_name[:-1] + NUMBER_TO_STRING[int(p_name[-1])]
-        else:
-            return p_name[:-2] + NUMBER_TO_STRING[int(p_name[-2:])]
+pkgname_colors = "palettecolors"
+pkgname_palettes = "palettes"
 
-NUMBER_TO_STRING = {
-    1: "one", 
-    2: "two", 
-    3: "three", 
-    4: "four",
-    5: "five", 
-    6: "six", 
-    7: "seven",
-    8: "eight", 
-    9: "nine",
-    10: "ten", 
-    11: "eleven", 
-    12: "twelve", 
-    13: "thirteen", 
-    14: "fourteen", 
-    15: "fifteen",
-    16: "sixteen",
-    17: "seventeen",
-    18: "eighteen", 
-    19: "nineteen", 
-    20: "twenty"
-}
+header = "% Color palettes inspired by works at the Metropolitan Museum of Art in New York, taken from https://github.com/BlakeRMills/MetBrewer"
 
-with open("palettes.tex", "w") as f:
-    print("% Color palettes inspired by works at the Metropolitan Museum of Art in New York, taken from https://github.com/BlakeRMills/MetBrewer", file=f)
-    print(r"% Include via \input{path/to/palettes.tex} after using \usepackage{xcolor}", file=f)
-    for p_name, p_dict in MET_PALETTES.items():
-        print(f"% Palette: {p_name}, #Colors: {len(p_dict['order'])}, Colorblind-friendly: {p_dict['colorblind']}", file=f)
-        sorted_colors = sorted(zip(p_dict['colors'], p_dict['order']), key=lambda tup:tup[-1])
-        for color, number in sorted_colors:
-            color_raw = color.replace('#','')
-            p_name_latexfriendly = replace_numbers_in_p_name(p_name)
-            print("\definecolor{PALETTENUMBER}{HTML}{COLOR}".replace("PALETTE", p_name_latexfriendly.lower()).replace("NUMBER", NUMBER_TO_STRING[number]).replace("COLOR",color_raw), file=f)
+plotcyclelists = {}
+
+with open(f"{pkgname_colors}.sty", "w") as f:
+    print(header, file=f)
+    print(r"% Include via \usepackage{relative/path/to/" + pkgname_colors + "}", file=f)
+    print(r"\RequirePackage{xcolor}", file=f)
+
+    with open(f"{pkgname_palettes}.sty", "w") as f2:
+        print(header, file=f2)
+        print(r"% Include via \usepackage{relative/path/to/" + pkgname_palettes + "}", file=f2)
+        print(r"\RequirePackage{xcolor}", file=f2)
+        print(r"\RequirePackage{pgfplots}", file=f2)
+        print(r"\RequirePackage{" + pkgname_colors + "}", file=f2)
+
+        for p_name, p_dict in MET_PALETTES.items():
+            palette_description = f"% Palette: {p_name}, #Colors: {len(p_dict['order'])}, Colorblind-friendly: {p_dict['colorblind']}"
+            print(palette_description, file=f)
+            colors = p_dict["colors"]
+            p_name_latexfriendly = p_name.lower()
+            plotcyclelists[p_name_latexfriendly] = []
+            for idx, color in enumerate(colors, start=1):
+                color_raw = color.replace("#", "")
+                color_name = f"({idx})"
+                full_name = f"{p_name_latexfriendly}{color_name}"
+                print("\definecolor{FULLNAME}{HTML}{COLOR}".replace("FULLNAME", full_name
+                                                                    ).replace("COLOR", color_raw), file=f)
+                plotcyclelists[p_name_latexfriendly].append(full_name)
+
+            print(palette_description, file=f2)
+            print(r"\pgfplotscreateplotcyclelist{PALETTE}{COLORS}".replace("PALETTE", p_name_latexfriendly
+                                                                     ).replace("COLORS", ",".join(plotcyclelists[p_name_latexfriendly])), file=f2)
