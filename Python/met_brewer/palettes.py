@@ -134,7 +134,6 @@ def export(name, format="hex"):
 
         elif format in {"XML", "IPE"}:
             color_strings = [" ".join(str(v) for v in c.rgb) for c in colors]
-            print(color_strings)
             export = {
                 "name": name,
                 "colors": [c.rgb for c in colors],
