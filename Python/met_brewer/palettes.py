@@ -56,6 +56,7 @@ MET_PALETTES = dict(
 
 COLORBLIND_PALETTES_NAMES = ("Cassatt1", "Cassatt2", "Derain", "Egypt", "Greek", "Hiroshige", "Hokusai2", "Hokusai3", "Ingres", "Isfahan1", "Isfahan2", "Morgenstern", "OKeeffe1", "OKeeffe2", "Pillement", "Troy", "VanGogh3", "Veronese")
 COLORBLIND_PALETTES = {name: MET_PALETTES[name] for name in COLORBLIND_PALETTES_NAMES}
+EXPORT_FORMATS = {"HEX", "DEC", "REL", "XML", "IPE"}
 
 
 def met_brew(name, n=None, brew_type="discrete"):
@@ -104,6 +105,45 @@ def met_brew(name, n=None, brew_type="discrete"):
     return out
 
 
+def export(name, format="hex"):
+
+    format = format.upper()
+
+    palette = MET_PALETTES.get(name)
+    colors = [Color(c) for c in palette.get("colors")]
+
+    export = dict()
+    if palette and format in EXPORT_FORMATS:
+        if format == "HEX":
+            export = {
+                "name": name,
+                "colors": [c.hex for c in colors]
+            }
+
+        elif format == "DEC":
+            export = {
+                "name": name,
+                "colors": [tuple([int(v*255) for v in c.rgb]) for c in colors]
+            }
+
+        elif format == "REL":
+            export = {
+                "name": name,
+                "colors": [c.rgb for c in colors]
+            }
+
+        elif format in {"XML", "IPE"}:
+            color_strings = [" ".join(str(v) for v in c.rgb) for c in colors]
+            print(color_strings)
+            export = {
+                "name": name,
+                "colors": [c.rgb for c in colors],
+                "tags": [f"<color name=\"{name}#{i}\" value=\"{v}\" />" for i, v in enumerate(color_strings, start=1)]
+            }
+
+        return export
+
+
 def is_colorblind_friendly(name):
 
     if name not in MET_PALETTES:
@@ -113,6 +153,16 @@ def is_colorblind_friendly(name):
 
 
 if __name__ == "__main__":
+
+    from pprint import pprint
+
+    exported = export("Egypt", "dec")
+    exported = export("Egypt", "rel")
+
+    exported = export("Egypt", "xml")
+    pprint(exported)
+    for t in exported.get("tags"):
+        print(t)
 
     import matplotlib.pyplot as plt
 
