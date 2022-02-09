@@ -105,6 +105,14 @@ def met_brew(name, n=None, brew_type="discrete"):
     return out
 
 
+def is_colorblind_friendly(name):
+
+    if name not in MET_PALETTES:
+        raise Exception(f"Palette {name} does not exist.")
+
+    return name in COLORBLIND_PALETTES_NAMES
+
+
 def export(name, format="hex"):
 
     format = format.upper()
@@ -141,14 +149,6 @@ def export(name, format="hex"):
             }
 
         return export
-
-
-def is_colorblind_friendly(name):
-
-    if name not in MET_PALETTES:
-        raise Exception(f"Palette {name} does not exist.")
-
-    return name in COLORBLIND_PALETTES_NAMES
 
 
 if __name__ == "__main__":
