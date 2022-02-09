@@ -137,7 +137,7 @@ def export(name, format="hex"):
             export = {
                 "name": name,
                 "colors": [c.rgb for c in colors],
-                "tags": [f"<color name=\"{name}#{i}\" value=\"{v}\" />" for i, v in enumerate(color_strings, start=1)]
+                "tags": [f"<color name=\"{name}-{i}\" value=\"{v}\" />" for i, v in enumerate(color_strings, start=1)]
             }
 
         return export
