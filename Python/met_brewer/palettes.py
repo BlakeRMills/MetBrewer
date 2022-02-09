@@ -56,6 +56,7 @@ MET_PALETTES = dict(
 
 COLORBLIND_PALETTES_NAMES = ("Cassatt1", "Cassatt2", "Derain", "Egypt", "Greek", "Hiroshige", "Hokusai2", "Hokusai3", "Ingres", "Isfahan1", "Isfahan2", "Morgenstern", "OKeeffe1", "OKeeffe2", "Pillement", "Troy", "VanGogh3", "Veronese")
 COLORBLIND_PALETTES = {name: MET_PALETTES[name] for name in COLORBLIND_PALETTES_NAMES}
+EXPORT_FORMATS = {"HEX", "DEC", "REL", "XML", "IPE"}
 
 
 def met_brew(name, n=None, brew_type="discrete"):
@@ -76,7 +77,10 @@ def met_brew(name, n=None, brew_type="discrete"):
             brew_type = "discrete"
 
     if brew_type == "discrete" and n > len(palette["colors"]):
-        raise Exception(f"Number ({n}) of requested colors greater than what discrete can offer, use as continuous instead.")
+        raise Exception(
+            f"Number ({n}) of requested colors greater than what discrete can offer, "
+            "use as continuous instead."
+        )
 
     out = list()
     if brew_type == "continuous":
@@ -112,7 +116,64 @@ def is_colorblind_friendly(name):
     return name in COLORBLIND_PALETTES_NAMES
 
 
+def export(name, format="hex"):
+
+    format = format.upper()
+
+    palette = MET_PALETTES.get(name)
+    colors = [Color(c) for c in palette.get("colors")]
+
+    export = dict()
+    if palette and format in EXPORT_FORMATS:
+        if format == "HEX":
+            export = {
+                "name": name,
+                "colors": [c.hex for c in colors]
+            }
+
+        elif format == "DEC":
+            export = {
+                "name": name,
+                "colors": [tuple([int(v*255) for v in c.rgb]) for c in colors]
+            }
+
+        elif format == "REL":
+            export = {
+                "name": name,
+                "colors": [tuple([round(v, 3) for v in c.rgb]) for c in colors]
+            }
+
+        elif format in {"XML", "IPE"}:
+            color_values = [
+                tuple([round(v, 3) for v in c.rgb])
+                for c in colors
+            ]
+            color_strings = [" ".join(str(v) for v in c) for c in color_values]
+            export = {
+                "name": name,
+                "colors": color_values,
+                "tags": [
+                    f"<color name=\"{name}-{i}\" value=\"{v}\" />"
+                    for i, v in enumerate(color_strings, start=1)
+                ]
+            }
+
+        return export
+
+
 if __name__ == "__main__":
+
+    from pprint import pprint
+
+    exported = export("Egypt", "dec")
+    print(exported)
+    exported = export("Egypt", "rel")
+    print(exported)
+
+    exported = export("Egypt", "xml")
+    pprint(exported)
+    for t in exported.get("tags"):
+        print(t)
 
     import matplotlib.pyplot as plt
 
