@@ -23,11 +23,15 @@ devtools::install_github("BlakeRMills/MetBrewer")
 ```
 
 ### Python
-Install the package under the `Python/` directory directly:
+Install the package via pip without manually downloading the repository:
+```
+pip install git+https://github.com/BlakeRMills/MetBrewer.git#subdirectory=Python
+```
+Or download the repository manually and install under the `Python/` directory directly:
 ```
 python setup.py install
 ```
-or via pip:
+or via pip from the `Python/` directory:
 ```
 pip install .
 ```
