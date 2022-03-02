@@ -87,6 +87,7 @@ MetPalettes <- list(
 #' colors are automatically interpolated. If n is not provided, the length of the palette is used.
 #' @param type Either "continuous" or "discrete". Use continuous if you want to automatically
 #' interpolate between colors.
+#' @param direction Either 1 or -1. Use -1 if you want to reverse the order of the palette.
 #' @return A vector of colors.
 #' @examples
 #' met.brewer("VanGogh1")
@@ -105,7 +106,7 @@ MetPalettes <- list(
 #' scale_color_gradientn(colors=met.brewer("Isfahan1"))
 #' @keywords colors
 #' @export
-met.brewer <- function(name, n, type = c("discrete", "continuous")) {
+met.brewer <- function(name, n, type = c("discrete", "continuous"), direction = 1) {
 
   palette <- MetPalettes[[name]]
 
@@ -127,6 +128,10 @@ met.brewer <- function(name, n, type = c("discrete", "continuous")) {
 
   if (type == "discrete" && n > length(palette[[1]])) {
     stop("Number of requested colors greater than what discrete palette can offer, \n  use as continuous instead.")
+  }
+
+  if (direction == -1){
+    palette[[1]] <- rev(palette[[1]])
   }
 
   out <- switch(type,
