@@ -1,4 +1,15 @@
+# R
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# Python
+__pycache__/
+dist/
+build/
+*.egg-info/
+pyvenv/
+
+# IDE
+.vscode/
