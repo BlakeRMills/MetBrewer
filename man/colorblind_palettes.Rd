@@ -11,6 +11,8 @@ An object of class \code{character} of length 18.
 colorblind_palettes
 }
 \description{
-Use \code{\link{met.brewer}} to construct palettes.
+Lists all palettes that are colorblind-friendly in the package.
+To be colorblind-friendly, all colors in the palettes must be distinguishable with deuteranopia, protanopia, and tritanopia.
+Use \code{\link{met.brewer}} to construct palettes or \code{\link{colorblind.friendly}} to test for colorblind-friendliness.
 }
 \keyword{datasets}

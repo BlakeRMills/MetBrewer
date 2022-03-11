@@ -20,7 +20,8 @@ colorblind.friendly(palette_name)
 TRUE/FALSE value whether palette is colorblind-friendly
 }
 \description{
-Checks whether a palette is colorblind-friendly.
+Checks whether a palette is colorblind-friendly. Colorblind-friendliness tested using the 'colorblindcheck' package.
+To be colorblind-friendly, all colors in the palettes must be distinguishable with deuteranopia, protanopia, and tritanopia.
 }
 \examples{
 colorblind.friendly("Veronese")
