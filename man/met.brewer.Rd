@@ -4,23 +4,36 @@
 \alias{met.brewer}
 \title{Met Palette Generator}
 \usage{
-met.brewer(name, n, type = c("discrete", "continuous"))
+met.brewer(
+  name,
+  n,
+  type = c("discrete", "continuous"),
+  direction = c(1, -1),
+  override.order = FALSE
+)
 }
 \arguments{
 \item{name}{Name of Palette. Choices are:
-\code{Austria}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas}, \code{Derain}, \code{Egypt},
-\code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1}, \code{Hokusai2}, \code{Hokusai3}, \code{Homer1},
-\code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2}, \code{Juarez}, \code{Klimt}, \code{Lakota},
-\code{Manet}, \code{Monet}, \code{Moreau}, \code{Morgenstern}, \code{Nattier}, \code{Navajo}, \code{NewKingdom},
-\code{Nizami}, \code{OKeeffe1}, \code{OKeeffe2}, \code{Peru1}, \code{Peru2}, \code{Pillement}, \code{Pissaro},
-\code{Redon}, \code{Renoir}, \code{Robert}, \code{Signac}, \code{Stevens}, \code{Tara}, \code{Thomas}, \code{Tiepolo},
-\code{Troy}, \code{Tsimshian}, \code{VanGogh1}, \code{VanGogh2}, \code{VanGogh3}, \code{Veronese}, and \code{Wissing}}
+\code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
+\code{Demuth}, \code{Derain}, \code{Egypt}, \code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1},
+\code{Hokusai2}, \code{Hokusai3}, \code{Homer1}, \code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2},
+\code{Java}, \code{Johnson},\code{Juarez}, \code{Kandinsky}, \code{Klimt}, \code{Lakota}, \code{Manet},
+\code{Monet}, \code{Moreau}, \code{Morgenstern}, \code{Nattier}, \code{Navajo}, \code{NewKingdom}, \code{Nizami},
+\code{OKeeffe1}, \code{OKeeffe2}, \code{Paquin}, \code{Peru1}, \code{Peru2}, \code{Pillement}, \code{Pissaro},
+\code{Redon}, \code{Renoir}, \code{Signac}, \code{Tam}, \code{Tara}, \code{Thomas}, \code{Tiepolo}, \code{Troy},
+\code{Tsimshian}, \code{VanGogh1}, \code{VanGogh2}, \code{VanGogh3}, \code{Veronese}, and \code{Wissing}}
 
 \item{n}{Number of desired colors. If number of requested colors is beyond the scope of the palette,
 colors are automatically interpolated. If n is not provided, the length of the palette is used.}
 
 \item{type}{Either "continuous" or "discrete". Use continuous if you want to automatically
 interpolate between colors.}
+
+\item{direction}{Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed}
+
+\item{override.order}{Colors are picked from palette to maximize readability and aesthetics. This means
+that colors are not always selected in sequential order from the full palette. If override.order is set to TRUE,
+colors are selected in sequential order from the full palette instead. Default is FALSE.}
 }
 \value{
 A vector of colors.

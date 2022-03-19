@@ -1,16 +1,12 @@
 Package: MetBrewer
 Type: Package
 Title: Color Palettes Inspired by Works at the Metropolitan Museum of Art
-Version: 0.1.0
+Version: 0.2.0
 Author: Blake Robert Mills
 Maintainer: Blake Robert Mills <blakerobertmills@gmail.com>
-<<<<<<< HEAD
-Description: Palettes Inspired by Works at the Metropolitan Museum of Art in New York. Currently contains 50 color schemes and checks for colorblind-friendliness of palettes. Colorblind accessibility checked using Jakub Nowosad's package 'colorblindcheck'<https://nowosad.github.io/colorblindcheck/>.
-=======
-Description: Palettes Inspired by Works at the Metropolitan Museum of Art in New York. Currently contains 50 color schemes and checks for colorblind-friendliness of palettes. Colorblind accessibility checked using the '{colorblindcheck} package by Jakub Nowosad'<https://nowosad.github.io/colorblindcheck/>.
->>>>>>> 082835323a60107b0d38b0901f003c6609cce84e
+Description: Palettes Inspired by Works at the Metropolitan Museum of Art in New York. Currently contains over 50 color schemes and checks for colorblind-friendliness of palettes. Colorblind accessibility checked using the '{colorblindcheck} package by Jakub Nowosad'<https://nowosad.github.io/colorblindcheck/>.
+Imports: ggplot2
 License: CC0
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
-Suggests: ggplot2

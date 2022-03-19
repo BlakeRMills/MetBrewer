@@ -5,7 +5,7 @@
 \alias{colorblind_palettes}
 \title{Names of colorblind-friendly palettes}
 \format{
-An object of class \code{character} of length 18.
+An object of class \code{character} of length 24.
 }
 \usage{
 colorblind_palettes
@@ -13,6 +13,6 @@ colorblind_palettes
 \description{
 Lists all palettes that are colorblind-friendly in the package.
 To be colorblind-friendly, all colors in the palettes must be distinguishable with deuteranopia, protanopia, and tritanopia.
-Use \code{\link{met.brewer}} to construct palettes or \code{\link{colorblind.friendly}} to test for colorblind-friendliness.
+Use \code{\link{met.brewer}}  to construct palettes or \code{\link{colorblind.friendly}} to test for colorblind-friendliness.
 }
 \keyword{datasets}
