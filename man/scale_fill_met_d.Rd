@@ -29,3 +29,8 @@ colors are selected in sequential order from the full palette instead. Default i
 Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
 for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 }
+\examples{
+ggplot(data=iris, aes(x=Species, y=Sepal.Length, fill=Species)) +
+geom_violin() +
+scale_fill_met_d("Lakota")
+}

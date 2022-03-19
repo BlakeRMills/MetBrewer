@@ -46,6 +46,10 @@ Use \code{\link{colorblind.friendly}} to check whether palettes are colorblind-f
 \examples{
 met.brewer("VanGogh1")
 
+met.brewer("Greek", direction=-1)
+
+met.brewer("Cassatt2", 4, override.order=T)
+
 library(ggplot2)
 ggplot(data=iris, aes(x=Species, y=Petal.Length, fill=Species)) +
 geom_violin() +

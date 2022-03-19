@@ -28,3 +28,13 @@ colors are selected in sequential order from the full palette instead. Default i
 \description{
 Function for viewing all palettes available in MetBrewer.
 }
+\examples{
+# All Palettes
+display_all(sequential = FALSE, colorblind_only = FALSE)
+
+# All Colorblind Palettes
+display_all(sequential = FALSE, colorblind_only = TRUE)
+
+# 5 Colors of all Palettes
+display_all(5, sequential = FALSE, colorblind_only = FALSE)
+}

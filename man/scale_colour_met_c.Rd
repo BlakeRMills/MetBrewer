@@ -25,3 +25,8 @@ scale_colour_met_c(name, direction = 1, ...)
 Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
 for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 }
+\examples{
+ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Sepal.Length)) +
+geom_point() +
+scale_colour_met_c("Isfahan1", direction=-1)
+}
