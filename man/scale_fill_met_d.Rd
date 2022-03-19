@@ -26,6 +26,6 @@ colors are selected in sequential order from the full palette instead. Default i
 \item{...}{Other arguments passed on to \code{\link[ggplot2]{discrete_scale}}}
 }
 \description{
-Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{scale_color_met_d} and \code{scale_fill_met_d}
-for discrete scales and \code{scale_color_met_c} and \code{scale_fill_met_c} for continuous scales.
+Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
+for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 }

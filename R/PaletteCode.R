@@ -243,8 +243,8 @@ colorblind.friendly <- function(palette_name){
 
 #' MetBrewer palettes for plotting with ggplot2
 #'
-#' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{scale_color_met_d} and \code{scale_fill_met_d}
-#' for discrete scales and \code{scale_color_met_c} and \code{scale_fill_met_c} for continuous scales.
+#' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
+#' for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 #'
 #' @param name Name of Palette. Choices are:
 #' \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
@@ -293,8 +293,8 @@ scale_color_met_d <- function(name, direction=1, override.order=FALSE, ...){
 
 #' MetBrewer palettes for plotting with ggplot2
 #'
-#' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{scale_color_met_d} and \code{scale_fill_met_d}
-#' for discrete scales and \code{scale_color_met_c} and \code{scale_fill_met_c} for continuous scales.
+#' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
+#' for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 #'
 #' @param name Name of Palette. Choices are:
 #' \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
@@ -343,8 +343,8 @@ scale_fill_met_d <- function(name, direction=1, override.order=FALSE, ...){
 
 #' MetBrewer palettes for plotting with ggplot2
 #'
-#' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{scale_color_met_d} and \code{scale_fill_met_d}
-#' for discrete scales and \code{scale_color_met_c} and \code{scale_fill_met_c} for continuous scales.
+#' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
+#' for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 #'
 #' @param name Name of Palette. Choices are:
 #' \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
@@ -373,8 +373,8 @@ scale_color_met_c <- function(name, direction=1, ...){
 
 #' MetBrewer palettes for plotting with ggplot2
 #'
-#' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{scale_color_met_d} and \code{scale_fill_met_d}
-#' for discrete scales and \code{scale_color_met_c} and \code{scale_fill_met_c} for continuous scales.
+#' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
+#' for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 #'
 #' @param name Name of Palette. Choices are:
 #' \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
@@ -403,8 +403,8 @@ scale_fill_met_c <- function(name, direction=1, ...){
 
 #' MetBrewer palettes for plotting with ggplot2
 #'
-#' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{scale_color_met_d} and \code{scale_fill_met_d}
-#' for discrete scales and \code{scale_color_met_c} and \code{scale_fill_met_c} for continuous scales.
+#' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
+#' for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 #'
 #' @param name Name of Palette. Choices are:
 #' \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
@@ -427,8 +427,8 @@ scale_colour_met_d <- scale_color_met_d
 
 #' MetBrewer palettes for plotting with ggplot2
 #'
-#' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{scale_color_met_d} and \code{scale_fill_met_d}
-#' for discrete scales and \code{scale_color_met_c} and \code{scale_fill_met_c} for continuous scales.
+#' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
+#' for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 #'
 #' @param name Name of Palette. Choices are:
 #' \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},

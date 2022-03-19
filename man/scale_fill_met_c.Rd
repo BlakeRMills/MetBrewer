@@ -22,6 +22,6 @@ scale_fill_met_c(name, direction = 1, ...)
 \item{...}{Other arguments passed on to \code{\link[ggplot2]{scale_color_gradientn}}}
 }
 \description{
-Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{scale_color_met_d} and \code{scale_fill_met_d}
-for discrete scales and \code{scale_color_met_c} and \code{scale_fill_met_c} for continuous scales.
+Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
+for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 }
