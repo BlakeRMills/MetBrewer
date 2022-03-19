@@ -105,7 +105,7 @@ MetPalettes <- list(
 #'
 #' met.brewer("Greek", direction=-1)
 #'
-#' met.brewer("Cassatt2", 4, override.order=T)
+#' met.brewer("Cassatt2", 4, override.order=TRUE)
 #'
 #' library(ggplot2)
 #' ggplot(data=iris, aes(x=Species, y=Petal.Length, fill=Species)) +
@@ -266,6 +266,7 @@ colorblind.friendly <- function(palette_name){
 #' @param ... Other arguments passed on to \code{\link[ggplot2]{discrete_scale}}
 #' @import ggplot2
 #' @examples
+#' library(ggplot2)
 #' ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
 #' geom_point() +
 #' scale_color_met_d("Juarez")
@@ -320,6 +321,7 @@ scale_color_met_d <- function(name, direction=1, override.order=FALSE, ...){
 #' @param ... Other arguments passed on to \code{\link[ggplot2]{discrete_scale}}
 #' @import ggplot2
 #' @examples
+#' library(ggplot2)
 #' ggplot(data=iris, aes(x=Species, y=Sepal.Length, fill=Species)) +
 #' geom_violin() +
 #' scale_fill_met_d("Lakota")
@@ -371,6 +373,7 @@ scale_fill_met_d <- function(name, direction=1, override.order=FALSE, ...){
 #' @param ... Other arguments passed on to \code{\link[ggplot2]{scale_color_gradientn}}
 #' @import ggplot2
 #' @examples
+#' library(ggplot2)
 #' ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Sepal.Length)) +
 #' geom_point() +
 #' scale_color_met_c("Isfahan1", direction=-1)
@@ -438,6 +441,7 @@ scale_fill_met_c <- function(name, direction=1, ...){
 #' @param ... Other arguments passed on to \code{\link[ggplot2]{discrete_scale}}
 #' @import ggplot2
 #' @examples
+#' library(ggplot2)
 #' ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
 #' geom_point() +
 #' scale_colour_met_d("Juarez")
@@ -463,6 +467,7 @@ scale_colour_met_d <- scale_color_met_d
 #' @param ... Other arguments passed on to \code{\link[ggplot2]{scale_color_gradientn}}
 #' @import ggplot2
 #' @examples
+#' library(ggplot2)
 #' ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Sepal.Length)) +
 #' geom_point() +
 #' scale_colour_met_c("Isfahan1", direction=-1)
