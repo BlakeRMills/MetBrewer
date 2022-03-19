@@ -30,6 +30,7 @@ Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{
 for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 }
 \examples{
+library(ggplot2)
 ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
 geom_point() +
 scale_color_met_d("Juarez")

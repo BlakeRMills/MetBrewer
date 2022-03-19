@@ -48,7 +48,7 @@ met.brewer("VanGogh1")
 
 met.brewer("Greek", direction=-1)
 
-met.brewer("Cassatt2", 4, override.order=T)
+met.brewer("Cassatt2", 4, override.order=TRUE)
 
 library(ggplot2)
 ggplot(data=iris, aes(x=Species, y=Petal.Length, fill=Species)) +
