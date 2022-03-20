@@ -422,12 +422,14 @@ You can list out the colorblind-friendly palettes with the following code
 ```r
 MetBrewer::colorblind_palettes
 
- [1] "Cassatt1"    "Cassatt2"    "Derain"      "Egypt"       "Greek"       "Hiroshige"   "Hokusai2"    "Hokusai3"    "Ingres"
-[10] "Isfahan1"    "Isfahan2"    "Morgenstern" "OKeeffe1"    "OKeeffe2"    "Pillement"   "Troy"        "VanGogh3"    "Veronese"
+ [1] "Archambault" "Cassatt1"    "Cassatt2"    "Demuth"      "Derain"      "Egypt"       "Greek"       "Hiroshige"  
+ [9] "Hokusai2"    "Hokusai3"    "Ingres"      "Isfahan1"    "Isfahan2"    "Java"        "Johnson"     "Kandinsky"  
+[17] "Morgenstern" "OKeeffe1"    "OKeeffe2"    "Pillement"   "Tam"         "Troy"        "VanGogh3"    "Veronese"   
 ```
 
 You can also test is a palettes is colorblind friendly using the function provided
 
 ```r
 MetBrewer::colorblind.friendly("Ingres")
+[1] TRUE
 ```
