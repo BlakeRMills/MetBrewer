@@ -1,4 +1,4 @@
-# MetBrewer
+# MetBrewer <img align="right" src="https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Hex/MetBrewerHex.jpg" width=400>
 Palettes inspired by works at the Metropolitan Museum of Art in New York. All pieces selected come from various time periods, regions, and mediums. Let me know if you have any requests for a particular piece.
 
 Structure of the package was based on coding from the [`PNWColors`](https://github.com/jakelawlor/PNWColors) and [`wesanderson`](https://github.com/karthik/wesanderson) packages. Inspired by the package [`RColorBrewer`](https://cran.r-project.org/web/packages/RColorBrewer/RColorBrewer.pdf) from the work of [Cynthia Brewer](http://colorbrewer2.org).
@@ -6,7 +6,6 @@ Structure of the package was based on coding from the [`PNWColors`](https://gith
 For requests, questions, comments, concerns, or any thing else, feel free to reach out to me:<br />
 Twitter: [here](https://twitter.com/BlakeRobMills)<br /> LinkedIn: [here](https://www.linkedin.com/in/blake-m-79a74513a/) <br />Email: brm2143@columbia.edu
 
-***
 # Content
 [Installation](#install-package)
 
