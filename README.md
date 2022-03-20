@@ -1,5 +1,6 @@
 # MetBrewer <img align="right" src="https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Hex/MetBrewerHex.jpg" width=400>
 Palettes inspired by works at the Metropolitan Museum of Art in New York. Pieces selected come from various time periods, regions, and mediums. 
+
 ![CRAN Version](https://www.r-pkg.org/badges/version/MetBrewer)
 ![CRAN Downloads](https://cranlogs.r-pkg.org/badges/MetBrewer)
 
