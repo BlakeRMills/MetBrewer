@@ -363,7 +363,7 @@ met.brewer("Manet", 5)
 ```r
 met.brewer("Morgenstern")
 ```
-![Ex3](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example%203.png)
+![Ex3](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example%203%20(Update).png)
 
 
 ```r
@@ -399,7 +399,7 @@ ggplot(data=iris, aes(x=Species, y=Sepal.Width, color=Sepal.Width)) +
   geom_point(size=3) +
   scale_color_gradientn(colors=met.brewer("Isfahan1"))
 ```
-![Ex8](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/GradientColorExample.png)
+![Ex8](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/GradientColorExample%20(Update).png)
 
 ```r
 library(urbnmapr)
