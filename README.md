@@ -399,7 +399,7 @@ ggplot(data=iris, aes(x=Species, y=Sepal.Width, color=Sepal.Width)) +
   geom_point(size=3) +
   scale_color_gradientn(colors=met.brewer("Isfahan1"))
 ```
-![Ex8](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/GradientColorExample%20(Update).png)
+![Ex8](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/GradientColorExample.png)
 
 ```r
 library(urbnmapr)
@@ -413,7 +413,7 @@ countydata %>%
   labs(fill="Homeownership rate") +
   theme_void()
 ```
-![Ex9](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/GradientFillExample.png)
+![Ex9](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/GradientFillExample%20(Update).png)
 
 
 ## Colorblind Friendly Checking
