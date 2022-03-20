@@ -48,6 +48,9 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 
 ## Palettes
 
+### All Palettes
+![AllPals](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/AllPalettes.png)
+
 ### Archambault 
 ![Archambault](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Archambault.png)
 - Woman’s Dress and Accessories, 2005, Jodi Archambault, Hunkpapa Lakota (Teton Sioux), [Link](https://www.metmuseum.org/art/collection/search/644324)
