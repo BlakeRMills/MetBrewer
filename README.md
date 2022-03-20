@@ -42,9 +42,20 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 
 ## Palettes
 
+### Archambault 
+![Archambault](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Archambault.png)
+- Woman’s Dress and Accessories, 2005, Jodi Archambault, Hunkpapa Lakota (Teton Sioux), [Link](https://www.metmuseum.org/art/collection/search/644324)
+-  Colorblind-Friendly
+***
+
 ### Austria
 ![Austria](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Austria.png)
 - Adoration of the Magi from Seven Scenes from the Life of Christ, 1390, Artists Unknown, Austrian, [Link](https://www.metmuseum.org/art/collection/search/469959)
+***
+
+### Benedictus
+![Benedictus](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Benedictus.png)
+- Relais, 1930 : quinze planches donnant quarante-deux motifs décoratifs : enluminure d'art de J. Saudé : préliminaires de Y. Rambosson, 1930, Edouard Bénedictus, French, [Link](https://www.metmuseum.org/art/collection/search/812492)
 ***
 
 ### Cassatt1
@@ -67,6 +78,12 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ### Degas
 ![Degas](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Degas.png)
 - The Rehearsal of the Ballet Onstage, 1874, Edgar Degas, French, [Link](https://www.metmuseum.org/art/collection/search/436155)
+***
+
+### Demuth
+![Demuth](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Demuth.png)
+- I Saw the Figure 5 in Gold, 1928, Charles Demuth, American, [Link](https://www.metmuseum.org/art/collection/search/488315)
+- Colorblind-Friendly
 ***
 
 ### Derain
@@ -143,9 +160,27 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 - Colorblind-Friendly
 ***
 
+### Java
+![Java](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Java.png)
+- Skirt, 20th Century, Javanese People, Javanese, [Link](https://www.metmuseum.org/art/collection/search/85689)
+- Colorblind-Friendly
+***
+
+### Johnson
+![Johnson](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Johnson.png)
+Jitterbugs V, 1941–42, William Henry Johnson, American, [Link](https://www.metmuseum.org/art/collection/search/491485)
+- Colorblind-Friendly
+***
+
 ### Juarez
 ![Juarez](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Juarez.png)
 - The Entombment of Christ, 1702, Juan Rodríguez Juárez, Mexican, [Link](https://www.metmuseum.org/art/collection/search/631985)
+***
+
+### Kandinsky
+![Kandinsky](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Kandinsky.png)
+Kleine Welten IV (Small Worlds IV), 1922, Vasily Kandinsky, French, born Russia, [Link](https://www.metmuseum.org/art/collection/search/369093?sortBy=Relevance&amp;ft=Vasily+Kandinsky&amp;offset=0&amp;rpp=40&amp;pos=12)
+- Colorblind-Friendly
 ***
 
 ### Klimt
@@ -211,6 +246,11 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 - Colorblind-Friendly
 ***
 
+### Paquin
+![Paquin](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Paquin.png)
+- Evening Dress, 1937, House of Paquin by Ana de Pombo, French House, Spanish Designer, [Link](https://www.metmuseum.org/art/collection/search/138291)
+***
+
 ### Peru1
 ![Peru1](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Peru1.png)
 - Ear Ornament, Winged Runner, A.D. 400–700, Moche, Peruvian, [Link](https://www.metmuseum.org/art/collection/search/309428)
@@ -245,6 +285,12 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ### Signac
 ![Signac](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Signac.png)
 - Notre-Dame-de-la-Garde (La Bonne-Mère), Marseilles, 1905-06, Paul Signac, French, [Link](https://www.metmuseum.org/art/collection/search/437672)
+***
+
+### Tam
+![Tam](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Tam.png)
+- Dragon Robe, 1998, Vivienne Tam, American, born China, [Link](https://www.metmuseum.org/art/collection/search/113019)
+- Colorblind-Friendly
 ***
 
 ### Tara
