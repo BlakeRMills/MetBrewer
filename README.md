@@ -7,6 +7,7 @@ For requests, questions, comments, concerns, or any thing else, feel free to rea
 Twitter: [here](https://twitter.com/BlakeRobMills)<br /> LinkedIn: [here](https://www.linkedin.com/in/blake-m-79a74513a/) <br />Email: brm2143@columbia.edu
 
 ***
+# Content
 [Installation](#install-package)
 
 [Palettes](#palettes)
