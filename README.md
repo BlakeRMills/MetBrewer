@@ -352,24 +352,24 @@ You can retrieve palettes using various methods listed below.
 
 met.brewer(name="VanGogh1",n=7,type="discrete")
 ```
-![Ex1](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example1.png)
+![Ex1](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example%201.png)
 
 ```r
 met.brewer("Manet", 5)
 ```
-![Ex2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example2.png)
+![Ex2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example%202.png)
 
 
 ```r
 met.brewer("Morgenstern")
 ```
-![Ex3](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example3.png)
+![Ex3](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example%203.png)
 
 
 ```r
 met.brewer("Troy",n=15,type="continuous")
 ```
-![Ex4](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example4.png)
+![Ex4](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example%204.png)
 
 ```r
 met.brewer("Hokusai",n=100)
