@@ -121,7 +121,7 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ***
 
 ### Homer2
-![Homer2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Homer2 (Update).png)
+![Homer2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Homer2%20(Update).png)
 - Flower Garden and Bungalow, Bermuda, 1899, Winslow Homer, American, [Link](https://www.metmuseum.org/art/collection/search/11121)
 ***
 
@@ -132,7 +132,7 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ***
 
 ### Isfahan1
-![Isfahan1](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Isfahan1 (Update).png)
+![Isfahan1](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Isfahan1%20(Update).png)
 - Mihrab (Prayer Niche), dated A.H. 755/ A.D. 1354–55,  From Iran, Isfahan, [Link](https://www.metmuseum.org/art/collection/search/449537?searchField=All&amp;sortBy=Relevance&amp;ft=Mihrab&amp;offset=0&amp;rpp=20&amp;pos=1)
 - Colorblind-Friendly
 ***
@@ -174,7 +174,7 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ***
 
 ### Morgenstern
-![Morgenstern](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Morgenstern (Update).png)
+![Morgenstern](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Morgenstern%20(Update).png)
 - Jungfrau, Mönch, and Eiger, 1851, Carl Morgenstern, German, [Link](https://www.metmuseum.org/art/collection/search/440360)
 - Colorblind-Friendly
 ***
@@ -217,7 +217,7 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ***
 
 ### Peru2
-![Peru2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Peru2 (Update).png)
+![Peru2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Peru2%20(Update).png)
 - Tunic with Confronting Catfish, A.D. 800–850, Nasca-Wari, Peruvian, [Link](https://www.metmuseum.org/art/collection/search/307975)
 ***
 
@@ -284,7 +284,7 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ***
 
 ### VanGogh3
-![VanGogh3](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/VanGogh3 (Update).png)
+![VanGogh3](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/VanGogh3%20(Update).png)
 - First Steps, after Millet, 1890, Vincent van Gogh, Dutch, [Link](https://www.metmuseum.org/art/collection/search/436526)
 - Colorblind-Friendly
 ***
