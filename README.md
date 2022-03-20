@@ -8,8 +8,11 @@ Twitter: [here](https://twitter.com/BlakeRobMills)<br /> LinkedIn: [here](https:
 
 ***
 [Installation](#install-package)
+
 [Palettes](#palettes)
+
 [Functions](#functions)
+
 [Colorblind Checking](#colorblind-friendly-checking)
 
 ## Install Package
