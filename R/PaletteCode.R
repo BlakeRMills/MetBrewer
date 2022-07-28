@@ -82,7 +82,7 @@ MetPalettes <- list(
 #' and the works that inspired them can be found \href{https://github.com/BlakeRMills/MetBrewer}{on Github}.
 #' Use \code{\link{colorblind.friendly}} to check whether palettes are colorblind-friendly.
 #'
-#' @param name Name of Palette. Choices are:
+#' @param palette Name of Palette. Choices are:
 #' \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
 #' \code{Demuth}, \code{Derain}, \code{Egypt}, \code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1},
 #' \code{Hokusai2}, \code{Hokusai3}, \code{Homer1}, \code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2},
@@ -121,13 +121,13 @@ MetPalettes <- list(
 #' scale_color_gradientn(colors=met.brewer("Isfahan1"))
 #' @keywords colors
 #' @export
-met.brewer <- function(name, n, type = c("discrete", "continuous"), direction = c(1, -1), override.order=FALSE) {
+met.brewer <- function(palette_name, n, type = c("discrete", "continuous"), direction = c(1, -1), override.order=FALSE) {
 
   `%notin%` <- Negate(`%in%`)
 
-  palette <- MetPalettes[[name]]
+  palette <- MetPalettes[[palette_name]]
 
-  if (is.null(palette)|is.numeric(name)){
+  if (is.null(palette)|is.numeric(palette_name)){
     stop("Palette does not exist.")
   }
 
@@ -173,7 +173,7 @@ met.brewer <- function(name, n, type = c("discrete", "continuous"), direction = 
                 continuous = continuous,
                 discrete = discrete
   )
-  structure(out, class = "palette", name = name)
+  structure(out, class = "palette", name = palette_name)
 
 }
 
@@ -250,7 +250,7 @@ colorblind.friendly <- function(palette_name){
 #' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
 #' for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 #'
-#' @param name Name of Palette. Choices are:
+#' @param palette_name Name of Palette. Choices are:
 #' \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
 #' \code{Demuth}, \code{Derain}, \code{Egypt}, \code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1},
 #' \code{Hokusai2}, \code{Hokusai3}, \code{Homer1}, \code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2},
@@ -271,12 +271,12 @@ colorblind.friendly <- function(palette_name){
 #' geom_point() +
 #' scale_color_met_d("Juarez")
 #' @export
-scale_color_met_d <- function(name, direction=1, override.order=FALSE, ...){
-  met.brewer.disc <- function(name, direction = c(1, -1), override.order=FALSE) {
+scale_color_met_d <- function(palette_name, direction=1, override.order=FALSE, ...){
+  met.brewer.disc <- function(palette_name, direction = c(1, -1), override.order=FALSE) {
 
     `%notin%` <- Negate(`%in%`)
-    palette <- MetPalettes[[name]]
-    if (is.null(palette)|is.numeric(name)){
+    palette <- MetPalettes[[palette_name]]
+    if (is.null(palette)|is.numeric(palette_name)){
       stop("Palette does not exist.")
     }
 
@@ -297,7 +297,7 @@ scale_color_met_d <- function(name, direction=1, override.order=FALSE, ...){
   }
 
   discrete_scale(aesthetics = "colour", scale_name="met_d",
-                 palette = met.brewer.disc(name=name, direction=direction, override.order=override.order))
+                 palette = met.brewer.disc(palette_name=palette_name, direction=direction, override.order=override.order))
 }
 
 #' MetBrewer palettes for plotting with ggplot2
@@ -305,7 +305,7 @@ scale_color_met_d <- function(name, direction=1, override.order=FALSE, ...){
 #' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
 #' for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 #'
-#' @param name Name of Palette. Choices are:
+#' @param palette_name Name of Palette. Choices are:
 #' \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
 #' \code{Demuth}, \code{Derain}, \code{Egypt}, \code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1},
 #' \code{Hokusai2}, \code{Hokusai3}, \code{Homer1}, \code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2},
@@ -326,12 +326,12 @@ scale_color_met_d <- function(name, direction=1, override.order=FALSE, ...){
 #' geom_violin() +
 #' scale_fill_met_d("Lakota")
 #' @export
-scale_fill_met_d <- function(name, direction=1, override.order=FALSE, ...){
-  met.brewer.disc <- function(name, direction = c(1, -1), override.order=FALSE) {
+scale_fill_met_d <- function(palette_name, direction=1, override.order=FALSE, ...){
+  met.brewer.disc <- function(palette_name, direction = c(1, -1), override.order=FALSE) {
 
     `%notin%` <- Negate(`%in%`)
-    palette <- MetPalettes[[name]]
-    if (is.null(palette)|is.numeric(name)){
+    palette <- MetPalettes[[palette_name]]
+    if (is.null(palette)|is.numeric(palette_name)){
       stop("Palette does not exist.")
     }
 
@@ -351,7 +351,7 @@ scale_fill_met_d <- function(name, direction=1, override.order=FALSE, ...){
   }
 
   discrete_scale(aesthetics = "fill", scale_name="met_d",
-                 palette = met.brewer.disc(name=name, direction=direction, override.order=override.order))
+                 palette = met.brewer.disc(palette_name=palette_name, direction=direction, override.order=override.order))
 }
 
 
@@ -360,7 +360,7 @@ scale_fill_met_d <- function(name, direction=1, override.order=FALSE, ...){
 #' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
 #' for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 #'
-#' @param name Name of Palette. Choices are:
+#' @param palette_name Name of Palette. Choices are:
 #' \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
 #' \code{Demuth}, \code{Derain}, \code{Egypt}, \code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1},
 #' \code{Hokusai2}, \code{Hokusai3}, \code{Homer1}, \code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2},
@@ -378,7 +378,7 @@ scale_fill_met_d <- function(name, direction=1, override.order=FALSE, ...){
 #' geom_point() +
 #' scale_color_met_c("Isfahan1", direction=-1)
 #' @export
-scale_color_met_c <- function(name, direction=1, ...){
+scale_color_met_c <- function(palette_name, direction=1, ...){
 
   `%notin%` <- Negate(`%in%`)
 
@@ -386,7 +386,7 @@ scale_color_met_c <- function(name, direction=1, ...){
     stop("Direction not valid. Please use 1 for standard palette or -1 for reversed palette.")
   }
 
-  scale_color_gradientn(colors=met.brewer(name=name, direction=direction, override.order = F))
+  scale_color_gradientn(colors=met.brewer(palette_name=palette_name, direction=direction, override.order = F))
 }
 
 
@@ -395,7 +395,7 @@ scale_color_met_c <- function(name, direction=1, ...){
 #' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
 #' for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 #'
-#' @param name Name of Palette. Choices are:
+#' @param palette_name Name of Palette. Choices are:
 #' \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
 #' \code{Demuth}, \code{Derain}, \code{Egypt}, \code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1},
 #' \code{Hokusai2}, \code{Hokusai3}, \code{Homer1}, \code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2},
@@ -408,7 +408,7 @@ scale_color_met_c <- function(name, direction=1, ...){
 #' @param ... Other arguments passed on to \code{\link[ggplot2]{scale_color_gradientn}}
 #' @import ggplot2
 #' @export
-scale_fill_met_c <- function(name, direction=1, ...){
+scale_fill_met_c <- function(palette_name, direction=1, ...){
 
   `%notin%` <- Negate(`%in%`)
 
@@ -416,7 +416,7 @@ scale_fill_met_c <- function(name, direction=1, ...){
     stop("Direction not valid. Please use 1 for standard palette or -1 for reversed palette.")
   }
 
-  scale_fill_gradientn(colors=met.brewer(name=name, direction=direction, override.order = F))
+  scale_fill_gradientn(colors=met.brewer(palette_name=palette_name, direction=direction, override.order = F))
 }
 
 
@@ -425,7 +425,7 @@ scale_fill_met_c <- function(name, direction=1, ...){
 #' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
 #' for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 #'
-#' @param name Name of Palette. Choices are:
+#' @param palette_name Name of Palette. Choices are:
 #' \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
 #' \code{Demuth}, \code{Derain}, \code{Egypt}, \code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1},
 #' \code{Hokusai2}, \code{Hokusai3}, \code{Homer1}, \code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2},
@@ -454,7 +454,7 @@ scale_colour_met_d <- scale_color_met_d
 #' Function for using \code{MetBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_met_d}} and \code{\link{scale_fill_met_d}}
 #' for discrete scales and \code{\link{scale_color_met_c}} and \code{\link{scale_fill_met_c}} for continuous scales.
 #'
-#' @param name Name of Palette. Choices are:
+#' @param palette_name Name of Palette. Choices are:
 #' \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
 #' \code{Demuth}, \code{Derain}, \code{Egypt}, \code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1},
 #' \code{Hokusai2}, \code{Hokusai3}, \code{Homer1}, \code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2},
