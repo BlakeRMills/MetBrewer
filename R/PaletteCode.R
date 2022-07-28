@@ -297,7 +297,8 @@ scale_color_met_d <- function(palette_name, direction=1, override.order=FALSE, .
   }
 
   discrete_scale(aesthetics = "colour", scale_name="met_d",
-                 palette = met.brewer.disc(palette_name=palette_name, direction=direction, override.order=override.order))
+                 palette = met.brewer.disc(palette_name=palette_name, direction=direction, override.order=override.order),
+                 ...)
 }
 
 #' MetBrewer palettes for plotting with ggplot2
@@ -351,7 +352,8 @@ scale_fill_met_d <- function(palette_name, direction=1, override.order=FALSE, ..
   }
 
   discrete_scale(aesthetics = "fill", scale_name="met_d",
-                 palette = met.brewer.disc(palette_name=palette_name, direction=direction, override.order=override.order))
+                 palette = met.brewer.disc(palette_name=palette_name, direction=direction, override.order=override.order),
+                 ...)
 }
 
 
@@ -386,7 +388,8 @@ scale_color_met_c <- function(palette_name, direction=1, ...){
     stop("Direction not valid. Please use 1 for standard palette or -1 for reversed palette.")
   }
 
-  scale_color_gradientn(colors=met.brewer(palette_name=palette_name, direction=direction, override.order = F))
+  scale_color_gradientn(colors=met.brewer(palette_name=palette_name, direction=direction, override.order = F),
+                        ...)
 }
 
 
@@ -416,7 +419,8 @@ scale_fill_met_c <- function(palette_name, direction=1, ...){
     stop("Direction not valid. Please use 1 for standard palette or -1 for reversed palette.")
   }
 
-  scale_fill_gradientn(colors=met.brewer(palette_name=palette_name, direction=direction, override.order = F))
+  scale_fill_gradientn(colors=met.brewer(palette_name=palette_name, direction=direction, override.order = F),
+                       ...)
 }
 
 
