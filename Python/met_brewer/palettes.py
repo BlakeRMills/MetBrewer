@@ -68,6 +68,8 @@ def met_brew(name, n=None, brew_type="discrete"):
 
     if not n:
         n = len(palette["colors"])
+        print(f"Palette '{name}' has '{n}' discrete colors")
+
 
     if brew_type not in {"discrete", "continuous"}:
         brew_type = "discrete"
@@ -106,6 +108,8 @@ def is_colorblind_friendly(name):
 
     if name not in MET_PALETTES:
         raise Exception(f"Palette {name} does not exist.")
+    else:
+        print(f"Palette '{name}' is colorblind friendly.")
 
     return name in COLORBLIND_PALETTES_NAMES
 
