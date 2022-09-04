@@ -69,18 +69,12 @@ def met_brew(name, n=None, brew_type="discrete"):
     if not n:
         n = len(palette["colors"])
 
-    if not brew_type or brew_type not in {"discrete", "continuous"}:
-
-        if n > len(palette["colors"]):
-            brew_type = "continuous"
-        else:
-            brew_type = "discrete"
+    if brew_type not in {"discrete", "continuous"}:
+        brew_type = "discrete"
 
     if brew_type == "discrete" and n > len(palette["colors"]):
-        raise Exception(
-            f"Number ({n}) of requested colors greater than what discrete can offer, "
-            "use as continuous instead."
-        )
+        print(f"Number of requested colors ('{n}') greater than number of colors '{name}' can offer. \n Setting brew_type to 'continuous' instead.")
+        brew_type = "continuous"
 
     out = list()
     if brew_type == "continuous":
