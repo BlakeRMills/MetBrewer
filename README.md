@@ -42,7 +42,7 @@ or place the file into your source directory.
 
 Use it in your code:
 ```python
-import met_palettes
+import met_brewer
 colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ```
 
@@ -359,29 +359,49 @@ Kleine Welten IV (Small Worlds IV), 1922, Vasily Kandinsky, French, born Russia,
 ```r
 You can retrieve palettes using various methods listed below.
 
-met.brewer(name="VanGogh1",n=7,type="discrete")
+Python
+met_brew(name="VanGogh1", n=7, brew_type="discrete")
+
+R
+met.brewer(name="VanGogh1", n=7, type="discrete")
 ```
 ![Ex1](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example%201.png)
 
 ```r
+Python
+met_brew(name="Manet", n=5)
+
+R
 met.brewer("Manet", 5)
 ```
 ![Ex2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example%202.png)
 
 
 ```r
+Python
+met_brew("Morgenstern")
+
+R
 met.brewer("Morgenstern")
 ```
 ![Ex3](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example%203%20(Update).png)
 
 
 ```r
-met.brewer("Troy",n=15,type="continuous")
+Python
+met_brew("Troy", n=15, brew_type="continuous")
+
+R
+met.brewer("Troy", n=15, type="continuous")
 ```
 ![Ex4](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example%204.png)
 
 ```r
-met.brewer("Hokusai",n=100)
+Python
+met_brew("Hokusai1", n=100, brew_type="continuous")
+
+R
+met.brewer("Hokusai1", n=100)
 ```
 ![Ex5](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example5.png)
 
@@ -429,6 +449,14 @@ countydata %>%
 The package has been updated to check for colorblind-friendlyness
 You can list out the colorblind-friendly palettes with the following code
 ```r
+Python
+for palette_name, palette_dict in COLORBLIND_PALETTES.items():
+    print(palette_name)
+    
+[1] Cassatt1, Cassatt2, Derain, Egypt, Greek, Hiroshige, Hokusai2, Hokusai3, Ingres
+[2] Isfahan1, Isfahan2, Morgenstern, OKeeffe1, OKeeffe2, Pillement, Troy, VanGogh3, Veronese
+
+R
 MetBrewer::colorblind_palettes
 
  [1] "Archambault" "Cassatt1"    "Cassatt2"    "Demuth"      "Derain"      "Egypt"       "Greek"       "Hiroshige"  
@@ -439,6 +467,11 @@ MetBrewer::colorblind_palettes
 You can also test is a palettes is colorblind friendly using the function provided
 
 ```r
+Python
+is_colorblind_friendly("Ingres")
+[1] True
+
+R
 MetBrewer::colorblind.friendly("Ingres")
 [1] TRUE
 ```
