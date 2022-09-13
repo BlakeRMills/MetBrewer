@@ -30,20 +30,14 @@ devtools::install_github("BlakeRMills/MetBrewer")
 ```
 
 ### Python
-Install the package under the `Python/` directory directly:
+Install the package from the main directory via pip:
+```
+pip install git+https://github.com/BlakeRMills/MetBrewer.git#subdirectory=Python
+
+```
+or place the file into your source directory:
 ```
 python setup.py install
-```
-or via pip:
-```
-pip install .
-```
-or place the file into your source directory.
-
-Use it in your code:
-```python
-import met_brewer
-colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ```
 
 ## Palettes
