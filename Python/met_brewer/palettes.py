@@ -174,19 +174,15 @@ if __name__ == "__main__":
         print(t)
 
     import matplotlib.pyplot as plt
+    def test_color(colors):
+        plt.figure()
+        for i, color in enumerate(colors):
+            plt.scatter([i + 1], [0], color=color)
 
+        plt.show()
+    
     colors = met_brew(name="VanGogh1")
-
-    plt.figure()
-    for i, color in enumerate(colors):
-        plt.scatter([i + 1], [0], color=color)
-
-    plt.show()
+    test_color(colors)
 
     colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
-
-    plt.figure()
-    for i, color in enumerate(colors):
-        plt.scatter([i + 1], [0], color=color)
-
-    plt.show()
+    test_color(colors)
