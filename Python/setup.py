@@ -8,7 +8,7 @@ long_description = Path.joinpath(this_directory, "README.md").read_text(encoding
 
 setup(
     name="met-brewer",
-    version="1.0.1",
+    version="1.0.2",
     packages=["met_brewer"],
     long_description=long_description,
     long_description_content_type="text/markdown",

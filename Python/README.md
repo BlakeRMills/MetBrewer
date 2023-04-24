@@ -20,17 +20,6 @@ My Website: [here](https://www.blakerobertmills.com)<br /> Twitter: [here](https
   - [Colorblind Friendly Checking](#colorblind-friendly-checking)
 
 ## Install Package
-### R
-MetBrewer is now able to be downloaded directly through R. You can still download through GitHub as well.
-
-```r
-install.packages("MetBrewer")
-
-install.packages("devtools")
-devtools::install_github("BlakeRMills/MetBrewer")
-```
-
-### Python
 Install via PyPA:
 ```
 pip install met-brewer
@@ -365,52 +354,31 @@ Kleine Welten IV (Small Worlds IV), 1922, Vasily Kandinsky, French, born Russia,
 
 
 ## Functions
-```r
 You can retrieve palettes using various methods listed below.
 
-Python
+```python
 met_brew(name="VanGogh1", n=7, brew_type="discrete")
-
-R
-met.brewer(name="VanGogh1", n=7, type="discrete")
 ```
 ![Ex1](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example%201.png)
 
-```r
-Python
+```python
 met_brew(name="Manet", n=5)
-
-R
-met.brewer("Manet", 5)
 ```
 ![Ex2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example%202.png)
 
 
-```r
-Python
+```python
 met_brew("Morgenstern")
-
-R
-met.brewer("Morgenstern")
 ```
 ![Ex3](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example%203%20(Update).png)
 
-
-```r
-Python
+```python
 met_brew("Troy", n=15, brew_type="continuous")
-
-R
-met.brewer("Troy", n=15, type="continuous")
 ```
 ![Ex4](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example%204.png)
 
-```r
-Python
+```python
 met_brew("Hokusai1", n=100, brew_type="continuous")
-
-R
-met.brewer("Hokusai1", n=100)
 ```
 ![Ex5](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/Example5.png)
 
@@ -418,39 +386,12 @@ met.brewer("Hokusai1", n=100)
 
 Here are also some ways you can incorporate this package into {ggplot2}
 
-```r
-ggplot(data=iris, aes(x=Species, y=Petal.Length, fill=Species)) +
-  geom_violin() +
-  scale_fill_manual(values=met.brewer("Greek", 3))
-```
 ![Ex6](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/FillExample.png)
 
-```r
-ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
-  geom_point(size=2) +
-  scale_color_manual(values=met.brewer("Renoir", 3))
-```
 ![Ex7](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/ColorExample.png)
 
-```r
-ggplot(data=iris, aes(x=Species, y=Sepal.Width, color=Sepal.Width)) +
-  geom_point(size=3) +
-  scale_color_gradientn(colors=met.brewer("Isfahan1"))
-```
 ![Ex8](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/GradientColorExample.png)
 
-```r
-library(urbnmapr)
-countydata %>%
-  left_join(counties, by = "county_fips") %>%
-  filter(state_name =="Nebraska") %>%
-  ggplot(mapping=aes(long,lat,group = group, fill = horate)) +
-  geom_polygon(color="black",size=.25) +
-  scale_fill_gradientn(colors = met.brewer("Morgenstern")) +
-  coord_fixed() +
-  labs(fill="Homeownership rate") +
-  theme_void()
-```
 ![Ex9](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/GradientFillExample%20(Update).png)
 
 
@@ -464,23 +405,11 @@ for palette_name, palette_dict in COLORBLIND_PALETTES.items():
 
 [1] Cassatt1, Cassatt2, Derain, Egypt, Greek, Hiroshige, Hokusai2, Hokusai3, Ingres
 [2] Isfahan1, Isfahan2, Morgenstern, OKeeffe1, OKeeffe2, Pillement, Troy, VanGogh3, Veronese
-
-R
-MetBrewer::colorblind_palettes
-
- [1] "Archambault" "Cassatt1"    "Cassatt2"    "Demuth"      "Derain"      "Egypt"       "Greek"       "Hiroshige"
- [9] "Hokusai2"    "Hokusai3"    "Ingres"      "Isfahan1"    "Isfahan2"    "Java"        "Johnson"     "Kandinsky"
-[17] "Morgenstern" "OKeeffe1"    "OKeeffe2"    "Pillement"   "Tam"         "Troy"        "VanGogh3"    "Veronese"
 ```
 
 You can also test if a palette is colorblind friendly using the function provided
 
-```r
-Python
+```python
 is_colorblind_friendly("Ingres")
 [1] True
-
-R
-MetBrewer::colorblind.friendly("Ingres")
-[1] TRUE
 ```
