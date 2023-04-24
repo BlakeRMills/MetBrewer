@@ -398,18 +398,20 @@ Here are also some ways you can incorporate this package into {ggplot2}
 ## Colorblind Friendly Checking
 The package has been updated to check for colorblind-friendlyness
 You can list out the colorblind-friendly palettes with the following code
-```r
-Python
+```python
 for palette_name, palette_dict in COLORBLIND_PALETTES.items():
     print(palette_name)
-
-[1] Cassatt1, Cassatt2, Derain, Egypt, Greek, Hiroshige, Hokusai2, Hokusai3, Ingres
-[2] Isfahan1, Isfahan2, Morgenstern, OKeeffe1, OKeeffe2, Pillement, Troy, VanGogh3, Veronese
+```
+```bash
+> Cassatt1, Cassatt2, Derain, Egypt, Greek, Hiroshige, Hokusai2, Hokusai3, Ingres
+> Isfahan1, Isfahan2, Morgenstern, OKeeffe1, OKeeffe2, Pillement, Troy, VanGogh3, Veronese
 ```
 
 You can also test if a palette is colorblind friendly using the function provided
 
 ```python
 is_colorblind_friendly("Ingres")
-[1] True
+```
+```bash
+> True
 ```
