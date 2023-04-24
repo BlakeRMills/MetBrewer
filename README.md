@@ -1,22 +1,23 @@
 # MetBrewer <img align="right" src="https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Hex/MetBrewerHex.jpg" width=400>
-Palettes inspired by works at the Metropolitan Museum of Art in New York. Pieces selected come from various time periods, regions, and mediums. 
+Palettes inspired by works at the Metropolitan Museum of Art in New York. Pieces selected come from various time periods, regions, and mediums.
 
 ![CRAN Version](https://www.r-pkg.org/badges/version/MetBrewer)
 ![CRAN Downloads](https://cranlogs.r-pkg.org/badges/MetBrewer)
 
 Structure of the package was based on coding from the [`PNWColors`](https://github.com/jakelawlor/PNWColors) and [`wesanderson`](https://github.com/karthik/wesanderson) packages. Inspired by the package [`RColorBrewer`](https://cran.r-project.org/web/packages/RColorBrewer/RColorBrewer.pdf) from the work of [Cynthia Brewer](http://colorbrewer2.org).
 
-For requests, questions, comments, concerns, or any thing else, feel free to reach out to me:<br />
+For requests, questions, comments, concerns, or anything else, feel free to reach out to me:<br />
 My Website: [here](https://www.blakerobertmills.com)<br /> Twitter: [here](https://twitter.com/BlakeRobMills)<br /> LinkedIn: [here](https://www.linkedin.com/in/blake-m-79a74513a/) <br />Email: brm2143@columbia.edu
 
-# Content
-[Installation](#install-package)
-
-[Palettes](#palettes)
-
-[Functions](#functions)
-
-[Colorblind Checking](#colorblind-friendly-checking)
+# Table of Contents
+- [MetBrewer ](#metbrewer-)
+  - [Install Package](#install-package)
+    - [R](#r)
+    - [Python](#python)
+  - [Palettes](#palettes)
+  - [Functions](#functions)
+    - [ggplot2 Examples](#ggplot2-examples)
+  - [Colorblind Friendly Checking](#colorblind-friendly-checking)
 
 ## Install Package
 ### R
@@ -30,15 +31,23 @@ devtools::install_github("BlakeRMills/MetBrewer")
 ```
 
 ### Python
-Install the package under the `Python/` directory directly:
+Install via PyPA:
 ```
-python setup.py install
+pip install met-brewer
 ```
-or via pip:
+or via pip directly from GitHub:
 ```
-pip install .
+pip install -e git+https://github.com/BlakeRMills/MetBrewer#subdirectory=Python
 ```
-or place the file into your source directory.
+
+For development, install the package under the `Python/` directory:
+```
+python setup.py develop
+```
+or via pip locally:
+```
+pip install -e .
+```
 
 Use it in your code:
 ```python
@@ -51,7 +60,7 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 ### All Palettes
 ![AllPals](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Examples/AllPalettes.png)
 
-### Archambault 
+### Archambault
 ![Archambault](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Archambault.png)
 - Woman’s Dress and Accessories, 2005, Jodi Archambault, Hunkpapa Lakota (Teton Sioux), [Link](https://www.metmuseum.org/art/collection/search/644324)
 -  Colorblind-Friendly
@@ -75,7 +84,7 @@ colors = met_brew(name="VanGogh1", n=123, brew_type="continuous")
 
 ### Cassatt2
 ![Cassatt2](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Cassatt2.png)
-- Lilacs in a Window (Vase de Lilas a la Fenetre), 1880–83, Mary Cassatt, American, [Link](https://www.metmuseum.org/art/collection/search/13758)
+- Lilacs in a Window (Vase de Lilas à la Fenetre), 1880–83, Mary Cassatt, American, [Link](https://www.metmuseum.org/art/collection/search/13758)
 - Colorblind-Friendly
 ***
 
@@ -204,7 +213,7 @@ Kleine Welten IV (Small Worlds IV), 1922, Vasily Kandinsky, French, born Russia,
 
 ### Manet
 ![Manet](https://github.com/BlakeRMills/MetBrewer/blob/main/PaletteImages/Manet.png)
-- Boating, 1874, Edouard Manet, French, [Link](https://www.metmuseum.org/art/collection/search/436947?searchField=All&amp;sortBy=Relevance&amp;ft=manet&amp;offset=0&amp;rpp=20&amp;pos=8)
+- Boating, 1874, Édouard Manet, French, [Link](https://www.metmuseum.org/art/collection/search/436947?searchField=All&amp;sortBy=Relevance&amp;ft=manet&amp;offset=0&amp;rpp=20&amp;pos=8)
 ***
 
 ### Monet
@@ -452,19 +461,19 @@ You can list out the colorblind-friendly palettes with the following code
 Python
 for palette_name, palette_dict in COLORBLIND_PALETTES.items():
     print(palette_name)
-    
+
 [1] Cassatt1, Cassatt2, Derain, Egypt, Greek, Hiroshige, Hokusai2, Hokusai3, Ingres
 [2] Isfahan1, Isfahan2, Morgenstern, OKeeffe1, OKeeffe2, Pillement, Troy, VanGogh3, Veronese
 
 R
 MetBrewer::colorblind_palettes
 
- [1] "Archambault" "Cassatt1"    "Cassatt2"    "Demuth"      "Derain"      "Egypt"       "Greek"       "Hiroshige"  
- [9] "Hokusai2"    "Hokusai3"    "Ingres"      "Isfahan1"    "Isfahan2"    "Java"        "Johnson"     "Kandinsky"  
-[17] "Morgenstern" "OKeeffe1"    "OKeeffe2"    "Pillement"   "Tam"         "Troy"        "VanGogh3"    "Veronese"   
+ [1] "Archambault" "Cassatt1"    "Cassatt2"    "Demuth"      "Derain"      "Egypt"       "Greek"       "Hiroshige"
+ [9] "Hokusai2"    "Hokusai3"    "Ingres"      "Isfahan1"    "Isfahan2"    "Java"        "Johnson"     "Kandinsky"
+[17] "Morgenstern" "OKeeffe1"    "OKeeffe2"    "Pillement"   "Tam"         "Troy"        "VanGogh3"    "Veronese"
 ```
 
-You can also test is a palettes is colorblind friendly using the function provided
+You can also test if a palette is colorblind friendly using the function provided
 
 ```r
 Python
