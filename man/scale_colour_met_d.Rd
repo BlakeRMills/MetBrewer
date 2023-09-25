@@ -4,10 +4,10 @@
 \alias{scale_colour_met_d}
 \title{MetBrewer palettes for plotting with ggplot2}
 \usage{
-scale_colour_met_d(name, direction = 1, override.order = FALSE, ...)
+scale_colour_met_d(palette_name, direction = 1, override_order = FALSE, ...)
 }
 \arguments{
-\item{name}{Name of Palette. Choices are:
+\item{palette_name}{Name of Palette. Choices are:
 \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
 \code{Demuth}, \code{Derain}, \code{Egypt}, \code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1},
 \code{Hokusai2}, \code{Hokusai3}, \code{Homer1}, \code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2},
@@ -19,8 +19,8 @@ scale_colour_met_d(name, direction = 1, override.order = FALSE, ...)
 
 \item{direction}{Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed}
 
-\item{override.order}{Colors are picked from palette to maximize readability and aesthetics. This means
-that colors are not always selected in sequential order from the full palette. If override.order is set to TRUE,
+\item{override_order}{Colors are picked from palette to maximize readability and aesthetics. This means
+that colors are not always selected in sequential order from the full palette. If override_order is set to TRUE,
 colors are selected in sequential order from the full palette instead. Default is FALSE.}
 
 \item{...}{Other arguments passed on to \code{\link[ggplot2]{discrete_scale}}}
