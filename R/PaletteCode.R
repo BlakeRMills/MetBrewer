@@ -80,9 +80,9 @@ MetPalettes <- list(
 #'
 #' Color palettes inspired by works at The Metropolitan Museum of Art. Complete list of palette colors
 #' and the works that inspired them can be found \href{https://github.com/BlakeRMills/MetBrewer}{on Github}.
-#' Use \code{\link{colorblind.friendly}} to check whether palettes are colorblind-friendly.
+#' Use \code{\link{colorblind.friendly.met}} to check whether palettes are colorblind-friendly.
 #'
-#' @param palette Name of Palette. Choices are:
+#' @param palette_name Name of Palette. Choices are:
 #' \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
 #' \code{Demuth}, \code{Derain}, \code{Egypt}, \code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1},
 #' \code{Hokusai2}, \code{Hokusai3}, \code{Homer1}, \code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2},
@@ -96,16 +96,17 @@ MetPalettes <- list(
 #' @param type Either "continuous" or "discrete". Use continuous if you want to automatically
 #' interpolate between colors.
 #' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
-#' @param override.order Colors are picked from palette to maximize readability and aesthetics. This means
-#' that colors are not always selected in sequential order from the full palette. If override.order is set to TRUE,
+#' @param override_order Colors are picked from palette to maximize readability and aesthetics. This means
+#' that colors are not always selected in sequential order from the full palette. If override_order is set to TRUE,
 #' colors are selected in sequential order from the full palette instead. Default is FALSE.
+#' @param return_hex Default is FALSE. If TRUE, hex codes of colors will be returned in addition to the palette.
 #' @return A vector of colors.
 #' @examples
 #' met.brewer("VanGogh1")
 #'
 #' met.brewer("Greek", direction=-1)
 #'
-#' met.brewer("Cassatt2", 4, override.order=TRUE)
+#' met.brewer("Cassatt2", 4, override_order=TRUE)
 #'
 #' library(ggplot2)
 #' ggplot(data=iris, aes(x=Species, y=Petal.Length, fill=Species)) +
@@ -121,7 +122,7 @@ MetPalettes <- list(
 #' scale_color_gradientn(colors=met.brewer("Isfahan1"))
 #' @keywords colors
 #' @export
-met.brewer <- function(palette_name, n, type = c("discrete", "continuous"), direction = c(1, -1), override.order=FALSE) {
+met.brewer <- function(palette_name, n, type = c("discrete", "continuous"), direction = c(1, -1), override_order=FALSE, return_hex=FALSE) {
 
   `%notin%` <- Negate(`%in%`)
 
@@ -159,11 +160,11 @@ met.brewer <- function(palette_name, n, type = c("discrete", "continuous"), dire
   }else{
     grDevices::colorRampPalette(rev(palette[[1]]))(n)}
 
-  discrete <- if(direction==1 & override.order==FALSE){
+  discrete <- if(direction==1 & override_order==FALSE){
     palette[[1]][which(palette[[2]] %in% c(1:n)==TRUE)]
-  }else if(direction==-1 & override.order==FALSE){
+  }else if(direction==-1 & override_order==FALSE){
     rev(palette[[1]][which(palette[[2]] %in% c(1:n)==TRUE)])
-  } else if(direction==1 & override.order==TRUE){
+  } else if(direction==1 & override_order==TRUE){
     palette[[1]][1:n]
   } else{
     rev(palette[[1]])[1:n]
@@ -173,8 +174,8 @@ met.brewer <- function(palette_name, n, type = c("discrete", "continuous"), dire
                 continuous = continuous,
                 discrete = discrete
   )
+  if(return_hex==T){print(out)}
   structure(out, class = "palette", name = palette_name)
-
 }
 
 # Function for printing palette
@@ -200,11 +201,11 @@ print.palette <- function(x, ...) {
 #'
 #' Lists all palettes that are colorblind-friendly in the package.
 #' To be colorblind-friendly, all colors in the palettes must be distinguishable with deuteranopia, protanopia, and tritanopia.
-#' Use \code{\link{met.brewer}}  to construct palettes or \code{\link{colorblind.friendly}} to test for colorblind-friendliness.
+#' Use \code{\link{met.brewer}}  to construct palettes or \code{\link{colorblind.friendly.met}} to test for colorblind-friendliness.
 #'
 #'
 #' @export
-colorblind_palettes <- c("Archambault", "Cassatt1", "Cassatt2", "Demuth", "Derain", "Egypt", "Greek", "Hiroshige",
+colorblind_met_palettes <- c("Archambault", "Cassatt1", "Cassatt2", "Demuth", "Derain", "Egypt", "Greek", "Hiroshige",
                          "Hokusai2", "Hokusai3", "Ingres", "Isfahan1", "Isfahan2", "Java", "Johnson", "Kandinsky",
                          "Morgenstern", "OKeeffe1", "OKeeffe2", "Pillement", "Tam", "Troy", "VanGogh3", "Veronese")
 
@@ -226,10 +227,10 @@ colorblind_palettes <- c("Archambault", "Cassatt1", "Cassatt2", "Demuth", "Derai
 #' \code{Redon}, \code{Renoir}, \code{Signac}, \code{Tam}, \code{Tara}, \code{Thomas}, \code{Tiepolo}, \code{Troy},
 #' \code{Tsimshian}, \code{VanGogh1}, \code{VanGogh2}, \code{VanGogh3}, \code{Veronese}, and \code{Wissing}
 #' @examples
-#' colorblind.friendly("Veronese")
+#' colorblind.friendly.met("Veronese")
 #' @return TRUE/FALSE value whether palette is colorblind-friendly
 #' @export
-colorblind.friendly <- function(palette_name){
+colorblind.friendly.met <- function(palette_name){
 
   `%notin%` <- Negate(`%in%`)
 
@@ -237,7 +238,7 @@ colorblind.friendly <- function(palette_name){
     stop("Palette does not exist.")
   }
 
-  friendly <- palette_name %in% colorblind_palettes
+  friendly <- palette_name %in% colorblind_met_palettes
 
   return(friendly)
 }
@@ -260,8 +261,8 @@ colorblind.friendly <- function(palette_name){
 #' \code{Redon}, \code{Renoir}, \code{Signac}, \code{Tam}, \code{Tara}, \code{Thomas}, \code{Tiepolo}, \code{Troy},
 #' \code{Tsimshian}, \code{VanGogh1}, \code{VanGogh2}, \code{VanGogh3}, \code{Veronese}, and \code{Wissing}
 #' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
-#' @param override.order Colors are picked from palette to maximize readability and aesthetics. This means
-#' that colors are not always selected in sequential order from the full palette. If override.order is set to TRUE,
+#' @param override_order Colors are picked from palette to maximize readability and aesthetics. This means
+#' that colors are not always selected in sequential order from the full palette. If override_order is set to TRUE,
 #' colors are selected in sequential order from the full palette instead. Default is FALSE.
 #' @param ... Other arguments passed on to \code{\link[ggplot2]{discrete_scale}}
 #' @import ggplot2
@@ -271,33 +272,10 @@ colorblind.friendly <- function(palette_name){
 #' geom_point() +
 #' scale_color_met_d("Juarez")
 #' @export
-scale_color_met_d <- function(palette_name, direction=1, override.order=FALSE, ...){
-  met.brewer.disc <- function(palette_name, direction = c(1, -1), override.order=FALSE) {
-
-    `%notin%` <- Negate(`%in%`)
-    palette <- MetPalettes[[palette_name]]
-    if (is.null(palette)|is.numeric(palette_name)){
-      stop("Palette does not exist.")
-    }
-
-    if (direction %notin% c(1, -1)){
-      stop("Direction not valid. Please use 1 for standard palette or -1 for reversed palette.")
-    }
-
-    function(n) if(direction==1 & override.order==FALSE){
-      palette[[1]][which(palette[[2]] %in% c(1:n)==TRUE)]
-    }else if(direction==-1 & override.order==FALSE){
-      rev(palette[[1]][which(palette[[2]] %in% c(1:n)==TRUE)])
-    } else if(direction==1 & override.order==TRUE){
-      palette[[1]][1:n]
-    } else{
-      rev(palette[[1]])[1:n]
-    }
-
-  }
-
-  discrete_scale(aesthetics = "colour", scale_name="met_d",
-                 palette = met.brewer.disc(palette_name=palette_name, direction=direction, override.order=override.order),
+scale_color_met_d <- function(palette_name, direction = 1, override_order = FALSE, ...){
+  discrete_scale(aesthetics = "colour",
+                 scale_name="met_d",
+                 palette= function(n) met.brewer(palette_name=palette_name, n = n, direction = direction, override_order = override_order),
                  ...)
 }
 
@@ -316,8 +294,8 @@ scale_color_met_d <- function(palette_name, direction=1, override.order=FALSE, .
 #' \code{Redon}, \code{Renoir}, \code{Signac}, \code{Tam}, \code{Tara}, \code{Thomas}, \code{Tiepolo}, \code{Troy},
 #' \code{Tsimshian}, \code{VanGogh1}, \code{VanGogh2}, \code{VanGogh3}, \code{Veronese}, and \code{Wissing}
 #' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
-#' @param override.order Colors are picked from palette to maximize readability and aesthetics. This means
-#' that colors are not always selected in sequential order from the full palette. If override.order is set to TRUE,
+#' @param override_order Colors are picked from palette to maximize readability and aesthetics. This means
+#' that colors are not always selected in sequential order from the full palette. If override_order is set to TRUE,
 #' colors are selected in sequential order from the full palette instead. Default is FALSE.
 #' @param ... Other arguments passed on to \code{\link[ggplot2]{discrete_scale}}
 #' @import ggplot2
@@ -327,35 +305,12 @@ scale_color_met_d <- function(palette_name, direction=1, override.order=FALSE, .
 #' geom_violin() +
 #' scale_fill_met_d("Lakota")
 #' @export
-scale_fill_met_d <- function(palette_name, direction=1, override.order=FALSE, ...){
-  met.brewer.disc <- function(palette_name, direction = c(1, -1), override.order=FALSE) {
-
-    `%notin%` <- Negate(`%in%`)
-    palette <- MetPalettes[[palette_name]]
-    if (is.null(palette)|is.numeric(palette_name)){
-      stop("Palette does not exist.")
-    }
-
-    if (direction %notin% c(1, -1)){
-      stop("Direction not valid. Please use 1 for standard palette or -1 for reversed palette.")
-    }
-
-    function(n) if(direction==1 & override.order==FALSE){
-      palette[[1]][which(palette[[2]] %in% c(1:n)==TRUE)]
-    }else if(direction==-1 & override.order==FALSE){
-      rev(palette[[1]][which(palette[[2]] %in% c(1:n)==TRUE)])
-    } else if(direction==1 & override.order==TRUE){
-      palette[[1]][1:n]
-    } else{
-      rev(palette[[1]])[1:n]
-    }
-  }
-
-  discrete_scale(aesthetics = "fill", scale_name="met_d",
-                 palette = met.brewer.disc(palette_name=palette_name, direction=direction, override.order=override.order),
+scale_fill_met_d <- function(palette_name, direction = 1, override_order = FALSE, ...){
+  discrete_scale(aesthetics = "fill",
+                 scale_name="met_d",
+                 palette= function(n) met.brewer(palette_name=palette_name, n = n, direction = direction, override_order = override_order),
                  ...)
 }
-
 
 #' MetBrewer palettes for plotting with ggplot2
 #'
@@ -388,7 +343,7 @@ scale_color_met_c <- function(palette_name, direction=1, ...){
     stop("Direction not valid. Please use 1 for standard palette or -1 for reversed palette.")
   }
 
-  scale_color_gradientn(colors=met.brewer(palette_name=palette_name, direction=direction, override.order = F),
+  scale_color_gradientn(colors=met.brewer(palette_name=palette_name, direction=direction, override_order = F),
                         ...)
 }
 
@@ -419,7 +374,7 @@ scale_fill_met_c <- function(palette_name, direction=1, ...){
     stop("Direction not valid. Please use 1 for standard palette or -1 for reversed palette.")
   }
 
-  scale_fill_gradientn(colors=met.brewer(palette_name=palette_name, direction=direction, override.order = F),
+  scale_fill_gradientn(colors=met.brewer(palette_name=palette_name, direction=direction, override_order = F),
                        ...)
 }
 
@@ -439,8 +394,8 @@ scale_fill_met_c <- function(palette_name, direction=1, ...){
 #' \code{Redon}, \code{Renoir}, \code{Signac}, \code{Tam}, \code{Tara}, \code{Thomas}, \code{Tiepolo}, \code{Troy},
 #' \code{Tsimshian}, \code{VanGogh1}, \code{VanGogh2}, \code{VanGogh3}, \code{Veronese}, and \code{Wissing}
 #' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
-#' @param override.order Colors are picked from palette to maximize readability and aesthetics. This means
-#' that colors are not always selected in sequential order from the full palette. If override.order is set to TRUE,
+#' @param override_order Colors are picked from palette to maximize readability and aesthetics. This means
+#' that colors are not always selected in sequential order from the full palette. If override_order is set to TRUE,
 #' colors are selected in sequential order from the full palette instead. Default is FALSE.
 #' @param ... Other arguments passed on to \code{\link[ggplot2]{discrete_scale}}
 #' @import ggplot2
@@ -481,7 +436,7 @@ scale_colour_met_c <- scale_color_met_c
 
 
 
-#' View all Palettes available
+#' View all Available Palettes
 #'
 #' Function for viewing all palettes available in MetBrewer.
 #'
@@ -489,26 +444,26 @@ scale_colour_met_c <- scale_color_met_c
 #' @param colorblind_only Should only colorblind friendly palettes be returned? Default is set to FALSE.
 #' @param sequential Should palettes displayed all at once, or one at a time. Default is all at once (FALSE).
 #' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
-#' @param override.order Colors are picked from palette to maximize readability and aesthetics. This means
-#' that colors are not always selected in sequential order from the full palette. If override.order is set to TRUE,
+#' @param override_order Colors are picked from palette to maximize readability and aesthetics. This means
+#' that colors are not always selected in sequential order from the full palette. If override_order is set to TRUE,
 #' colors are selected in sequential order from the full palette instead. Default is FALSE.
 #' @examples
 #' # All Palettes
-#' display_all(sequential = FALSE, colorblind_only = FALSE)
+#' display.all.met(sequential = FALSE, colorblind_only = FALSE)
 #'
 #' # All Colorblind Palettes
-#' display_all(sequential = FALSE, colorblind_only = TRUE)
+#' display.all.met(sequential = FALSE, colorblind_only = TRUE)
 #'
 #' # 5 Colors of all Palettes
-#' display_all(5, sequential = FALSE, colorblind_only = FALSE)
+#' display.all.met(5, sequential = FALSE, colorblind_only = FALSE)
 #' @export
 #' @importFrom graphics rect par layout polygon
 
 
-display_all <- function(n, sequential = FALSE, colorblind_only = FALSE, direction = 1, override.order=FALSE){
+display.all.met <- function(n, sequential = FALSE, colorblind_only = FALSE, direction = 1, override_order=FALSE){
   if(colorblind_only){
-    N = length(colorblind_palettes)
-    pal_names = colorblind_palettes
+    N = length(colorblind_met_palettes)
+    pal_names = colorblind_met_palettes
   }else{
     N = length(MetPalettes)
     pal_names = names(MetPalettes)
@@ -518,14 +473,14 @@ display_all <- function(n, sequential = FALSE, colorblind_only = FALSE, directio
 
   plot_palette = function(name,n){
     par(mar = c(0.1,0.1,1,0.1))
-    nn = ifelse(missing(n), length(met.brewer(name)), n)
+    nn <- ifelse(missing(n), length(met.brewer(name)), n)
     plot(0,type='n',bty='n',xaxt='n',yaxt='n',xlab='',ylab='',
          ylim = c(0,1),xlim=c(0,nn), main = name)
     for(j in 1:nn){
       polygon(x = c(j-1,j-1,j,j),
               y = c(0,1,1,0),
               border = NA,
-              col = met.brewer(name, nn, direction= direction,override.order=override.order)[j])
+              col = met.brewer(name, nn, direction= direction,override_order=override_order)[j])
     }
   }
 
@@ -579,5 +534,87 @@ display_all <- function(n, sequential = FALSE, colorblind_only = FALSE, directio
 
   }
 }
+
+#' View Sample Visualization for Palettes
+#'
+#' Creates four sample visualizations for testing how a palette looks.
+#'
+#' @param palette_name Name of Palette. Choices are:
+#' \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
+#' \code{Demuth}, \code{Derain}, \code{Egypt}, \code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1},
+#' \code{Hokusai2}, \code{Hokusai3}, \code{Homer1}, \code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2},
+#' \code{Java}, \code{Johnson},\code{Juarez}, \code{Kandinsky}, \code{Klimt}, \code{Lakota}, \code{Manet},
+#' \code{Monet}, \code{Moreau}, \code{Morgenstern}, \code{Nattier}, \code{Navajo}, \code{NewKingdom}, \code{Nizami},
+#' \code{OKeeffe1}, \code{OKeeffe2}, \code{Paquin}, \code{Peru1}, \code{Peru2}, \code{Pillement}, \code{Pissaro},
+#' \code{Redon}, \code{Renoir}, \code{Signac}, \code{Tam}, \code{Tara}, \code{Thomas}, \code{Tiepolo}, \code{Troy},
+#' \code{Tsimshian}, \code{VanGogh1}, \code{VanGogh2}, \code{VanGogh3}, \code{Veronese}, and \code{Wissing}
+#' @param n Number of desired colors. If number of requested colors is beyond the scope of the palette,
+#' colors are automatically interpolated. If n is not provided, the length of the palette is used.
+#' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
+#' @param override_order Colors are picked from palette to maximize readability and aesthetics. This means
+#' that colors are not always selected in sequential order from the full palette. If override_order is set to TRUE,
+#' colors are selected in sequential order from the full palette instead. Default is FALSE.
+#' @export
+#' @importFrom ggstream geom_stream
+#' @importFrom cowplot ggdraw plot_grid draw_label
+#' @importFrom stats rnorm runif
+
+test.plots.met <- function(palette_name, n, direction=1, override_order=FALSE){
+
+  if(missing(n)){
+    n <- length(met.brewer(palette_name))
+  }
+
+  if(n > 26){
+    stop("Cannot create visualation when requesting more than 26 colors.")
+  }
+
+  type <- if(n > length(met.brewer(palette_name))){"continuous"}else{"discrete"}
+
+  test_pal <- met.brewer(palette_name, n, type, direction, override_order, return_hex = FALSE)
+
+  pie_plot <- ggplot() +
+    geom_bar(aes(x=1:n, y=runif(n, 2, 3), fill=letters[1:n]), stat="identity") +
+    coord_polar() +
+    scale_x_continuous(expand = c(0, 0.04)) +
+    scale_fill_manual(values=test_pal) +
+    theme_void() +
+    theme(legend.position = "none",
+          plot.background = element_rect(color="white", fill="white"))
+
+  stream <- data.frame(col=sort(rep(letters[1:n], 10)))
+
+  stream_plot <- ggplot(data = stream) +
+      geom_stream(aes(x=rep(1:10, n), y=runif(10*n, 0, 3), fill=col), extra_span = 0.15) +
+      scale_x_continuous(expand = c(0, 0.04)) +
+      scale_fill_manual(values=test_pal) +
+      theme_void() +
+      theme(legend.position = "none",
+            plot.background = element_rect(color="white", fill="white"))
+
+   violin_plot <- ggplot() +
+      geom_violin(aes(x=sort(rep(1:n, 15)), y=rnorm(15*n, 0, 0.75), fill=sort(rep(letters[1:n], 15))), color="transparent") +
+      scale_x_continuous(expand = c(0, 0.04)) +
+      scale_fill_manual(values=test_pal) +
+      theme_void() +
+      theme(legend.position = "none",
+            plot.background = element_rect(color="white", fill="white"))
+
+  bars_plot <- ggplot() +
+    geom_bar(aes(x=rep(1:5, n), y=runif(5*n, 0, 5), fill=sort(rep(letters[1:n], 5))), stat="identity", position = "stack") +
+    scale_x_continuous(expand = c(0, 0.04)) +
+    scale_fill_manual(values=test_pal) +
+    theme_void() +
+    theme(legend.position = "none",
+          plot.background = element_rect(color="white", fill="white"))
+
+
+  title <- ggdraw() + draw_label(palette_name, fontface = "bold", x = 0.5, hjust = 0.5, size=rel(20))
+  grid <- plot_grid(pie_plot, stream_plot, violin_plot, bars_plot,  nrow=2)
+  test_grid <- plot_grid(title, grid, ncol=1, rel_heights = c(0.1, 1))
+
+  print(test_grid)
+}
+
 
 
