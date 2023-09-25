@@ -5,15 +5,16 @@
 \title{Met Palette Generator}
 \usage{
 met.brewer(
-  name,
+  palette_name,
   n,
   type = c("discrete", "continuous"),
   direction = c(1, -1),
-  override.order = FALSE
+  override_order = FALSE,
+  return_hex = FALSE
 )
 }
 \arguments{
-\item{name}{Name of Palette. Choices are:
+\item{palette_name}{Name of Palette. Choices are:
 \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
 \code{Demuth}, \code{Derain}, \code{Egypt}, \code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1},
 \code{Hokusai2}, \code{Hokusai3}, \code{Homer1}, \code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2},
@@ -31,9 +32,11 @@ interpolate between colors.}
 
 \item{direction}{Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed}
 
-\item{override.order}{Colors are picked from palette to maximize readability and aesthetics. This means
-that colors are not always selected in sequential order from the full palette. If override.order is set to TRUE,
+\item{override_order}{Colors are picked from palette to maximize readability and aesthetics. This means
+that colors are not always selected in sequential order from the full palette. If override_order is set to TRUE,
 colors are selected in sequential order from the full palette instead. Default is FALSE.}
+
+\item{return_hex}{Default is FALSE. If TRUE, hex codes of colors will be returned in addition to the palette.}
 }
 \value{
 A vector of colors.
@@ -41,14 +44,14 @@ A vector of colors.
 \description{
 Color palettes inspired by works at The Metropolitan Museum of Art. Complete list of palette colors
 and the works that inspired them can be found \href{https://github.com/BlakeRMills/MetBrewer}{on Github}.
-Use \code{\link{colorblind.friendly}} to check whether palettes are colorblind-friendly.
+Use \code{\link{colorblind.friendly.met}} to check whether palettes are colorblind-friendly.
 }
 \examples{
 met.brewer("VanGogh1")
 
 met.brewer("Greek", direction=-1)
 
-met.brewer("Cassatt2", 4, override.order=TRUE)
+met.brewer("Cassatt2", 4, override_order=TRUE)
 
 library(ggplot2)
 ggplot(data=iris, aes(x=Species, y=Petal.Length, fill=Species)) +

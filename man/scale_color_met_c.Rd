@@ -4,10 +4,10 @@
 \alias{scale_color_met_c}
 \title{MetBrewer palettes for plotting with ggplot2}
 \usage{
-scale_color_met_c(name, direction = 1, ...)
+scale_color_met_c(palette_name, direction = 1, ...)
 }
 \arguments{
-\item{name}{Name of Palette. Choices are:
+\item{palette_name}{Name of Palette. Choices are:
 \code{Archambault}, \code{Austria}, \code{Benedictus}, \code{Cassatt1}, \code{Cassatt2}, \code{Cross}, \code{Degas},
 \code{Demuth}, \code{Derain}, \code{Egypt}, \code{Gauguin}, \code{Greek}, \code{Hiroshige}, \code{Hokusai1},
 \code{Hokusai2}, \code{Hokusai3}, \code{Homer1}, \code{Homer2}, \code{Ingres}, \code{Isfahan1}, \code{Isfahan2},
