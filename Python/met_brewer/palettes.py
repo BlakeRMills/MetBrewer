@@ -116,8 +116,10 @@ def is_colorblind_friendly(name):
 
     if name not in MET_PALETTES:
         raise Exception(f"Palette {name} does not exist.")
-    else:
+    elif name in COLORBLIND_PALETTES_NAMES:
         print(f"Palette '{name}' is colorblind friendly.")
+    else:
+        print(f"Palette '{name}' is NOT colorblind friendly.")
 
     return name in COLORBLIND_PALETTES_NAMES
 
